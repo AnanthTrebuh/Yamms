@@ -144,6 +144,7 @@
     <ClCompile Include="GrandeSuite.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PetiteSuite.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Brelan.h" />

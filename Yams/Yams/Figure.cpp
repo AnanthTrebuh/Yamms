@@ -17,3 +17,8 @@ int Figure::getScore()
 {
 	return _score;
 }
+
+std::string Figure::getName()
+{
+	return _name;
+}

@@ -22,6 +22,7 @@ public:
 	virtual int calculScore() = 0;
 	virtual bool isFigure();
 	int getScore();
+	std::string getName();
 
 };
 
