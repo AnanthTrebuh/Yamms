@@ -154,6 +154,7 @@
     <ClInclude Include="GrandeSuite.h" />
     <ClInclude Include="PartieSuperieure.h" />
     <ClInclude Include="PetiteSuite.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="SameDice.h" />
     <ClInclude Include="Yahtzee.h" />
   </ItemGroup>
