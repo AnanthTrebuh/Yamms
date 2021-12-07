@@ -7,6 +7,20 @@ Player::Player()
 	_score = 0;
 	_figures = std::vector<Figure>();
 	_figureToDo = std::vector<std::string>();
+	_figureToDo.push_back("Chance");
+	_figureToDo.push_back("Brelan");
+	_figureToDo.push_back("Yahtzee");
+	_figureToDo.push_back("Carre");
+	_figureToDo.push_back("Full");
+	_figureToDo.push_back("PetiteSuite");
+	_figureToDo.push_back("GrandeSuite");
+	_figureToDo.push_back("PartieSuperieur1");
+	_figureToDo.push_back("PartieSuperieur2");
+	_figureToDo.push_back("PartieSuperieur3");
+	_figureToDo.push_back("PartieSuperieur4");
+	_figureToDo.push_back("PartieSuperieur5");
+	_figureToDo.push_back("PartieSuperieur6");
+
 
 }
 
@@ -15,6 +29,20 @@ Player::Player(int id, std::string name): _id(id), _name(name)
 	_score = 0;
 	_figures = std::vector<Figure>();
 	_figureToDo = std::vector<std::string>();
+	_figureToDo.push_back("Chance");
+	_figureToDo.push_back("Brelan");
+	_figureToDo.push_back("Yahtzee");
+	_figureToDo.push_back("Carre");
+	_figureToDo.push_back("Full");
+	_figureToDo.push_back("PetiteSuite");
+	_figureToDo.push_back("GrandeSuite");
+	_figureToDo.push_back("PartieSuperieur1");
+	_figureToDo.push_back("PartieSuperieur2");
+	_figureToDo.push_back("PartieSuperieur3");
+	_figureToDo.push_back("PartieSuperieur4");
+	_figureToDo.push_back("PartieSuperieur5");
+	_figureToDo.push_back("PartieSuperieur6");
+
 }
 
 Player::Player(const Player& p)
@@ -22,7 +50,14 @@ Player::Player(const Player& p)
 	_id = p._id;
 	_name = p._name;
 	_score = p._score;
-	_figures = p._figures;
+	for (int i = 0; i < p._figures.size(); i++)
+	{
+		_figures.push_back(p._figures[i]);
+	}
+	for (int j = 0; j < p._figureToDo.size(); j++)
+	{
+		_figureToDo.push_back(p._figureToDo[j]);
+	}
 	_figureToDo = p._figureToDo;
 }
 
@@ -56,4 +91,15 @@ void Player::addFigure(Figure& fig)
 			_figureToDo.erase(_figureToDo.begin() + i);
 		}
 	}
+	calculScore();
+}
+
+int Player::getScore()
+{
+	return _score;
+}
+
+std::string Player::getName()
+{
+	return _name;
 }

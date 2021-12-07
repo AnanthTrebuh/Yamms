@@ -14,6 +14,7 @@
 #include "PetiteSuite.h"
 #include "Brelan.h"
 #include "PartieSuperieure.h"
+#include "Player.h"
 
 int main() {
 	std::cout << "______" << std::endl;
@@ -93,7 +94,7 @@ int main() {
 	PartieSuperieure<2> ps7(resultLancerpartSup7);
 	PartieSuperieure<1> ps8(resultLancerpartSup8);
 
-	std::cout << "Partie sup avec plusieur possibilité" << std::endl;
+	std::cout << "\n\nPartie sup avec plusieur possibilité" << std::endl;
 	std::cout << "attendu : 5 resultat : " << ps1.getScore() << std::endl;
 	std::cout << "attendu : 4 resultat : " << ps2.getScore() << std::endl;
 	std::cout << "attendu : 0 resultat : " << ps3.getScore() << std::endl;
@@ -102,6 +103,37 @@ int main() {
 	std::cout << "attendu : 30 resultat : " << ps6.getScore() << std::endl;
 	std::cout << "attendu : 2 resultat : " << ps7.getScore() << std::endl;
 	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;
+
+	std::cout << "\n\nTest de la classe player\n";
+	
+	Player p = Player(1, "Jean");
+	p.addFigure(c);
+	p.addFigure(c2);
+	p.addFigure(c3);
+	p.addFigure(c4);
+	p.addFigure(c5);
+	p.addFigure(c6);
+	p.addFigure(c7);
+	p.addFigure(ps1);
+	p.addFigure(ps2);
+	p.addFigure(ps3);
+	p.addFigure(ps4);
+	p.addFigure(ps5);
+	p.addFigure(ps6);
+	std::cout << "Ajout de toutes les figures valide a un joueur, ";
+	std::cout << p.getName() << " : " << p.getScore() << " attendu 249\n";
+
+
+	Player p2 = Player(2, "Paul");
+	
+	p2.addFigure(c1);
+	p2.addFigure(c3Bad);
+	p2.addFigure(c4Bad);
+	p2.addFigure(c5Bad);
+	p2.addFigure(c6Bad);
+	p2.addFigure(c7Bad);
+	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
+	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";
 
 
 }

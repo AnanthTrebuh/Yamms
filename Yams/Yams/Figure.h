@@ -19,7 +19,7 @@ protected:
 public:
 
 	Figure(const std::vector<int> result_lancer, std::string name);
-	virtual int calculScore() = 0;
+	virtual int calculScore();
 	virtual bool isFigure();
 	int getScore();
 	std::string getName();

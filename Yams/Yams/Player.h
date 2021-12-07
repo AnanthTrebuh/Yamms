@@ -20,5 +20,7 @@ public :
 	~Player();
 	int calculScore();
 	void addFigure(Figure& fig);
+	int getScore();
+	std::string getName();
 };
 #endif

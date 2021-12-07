@@ -2,6 +2,8 @@
 //Nathan Hubert
 #pragma once
 #include "Figure.h"
+#include <iostream>
+#include <string>
 
 template<int N>
 class PartieSuperieure : public Figure
@@ -12,7 +14,7 @@ public:
 };
 
 template<int n>
-inline PartieSuperieure<n>::PartieSuperieure(std::vector<int>  lancer): Figure(lancer, ("PartieSuperieur"+n))
+inline PartieSuperieure<n>::PartieSuperieure(std::vector<int>  lancer): Figure(lancer, ("PartieSuperieur"+ std::to_string(n)))
 {
 	_score = calculScore();
 }
