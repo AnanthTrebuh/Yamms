@@ -15,6 +15,7 @@
 #include "Brelan.h"
 #include "PartieSuperieure.h"
 #include "Player.h"
+#include "Des.h"
 
 int main() {
 	std::cout << "______" << std::endl;
@@ -135,5 +136,13 @@ int main() {
 	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
 	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";
 
+	std::cout << "\n\nTest de la classe Des\n";
+	Des d = Des(1);
+	for (int i = 0; i < 10; i++)
+	{
+		d.jet();
+		std::cout << "nouvelle valeur du de : " << d.getValeur() << "\n";
+	}
+	
 
 }
