@@ -6,6 +6,7 @@
 #define _PLAYER_H_
 
 class Player {
+private :
 	int _id; 
 	std::string _name;
 	unsigned int _score;
