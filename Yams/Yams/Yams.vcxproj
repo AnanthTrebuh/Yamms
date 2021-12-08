@@ -142,6 +142,7 @@
     <ClCompile Include="Chance.cpp" />
     <ClCompile Include="Des.cpp" />
     <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GrandeSuite.cpp" />
     <ClCompile Include="Lancer.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Des.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Full.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GrandeSuite.h" />
     <ClInclude Include="Lancer.h" />
     <ClInclude Include="PartieSuperieure.h" />

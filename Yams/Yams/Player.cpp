@@ -103,3 +103,8 @@ std::string Player::getName()
 {
 	return _name;
 }
+
+void Player::affichePlayer()
+{
+	std::cout << "Joueur no " << _id << " : " << _name << std::endl;
+}

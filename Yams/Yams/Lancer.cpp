@@ -7,18 +7,6 @@ Lancer::Lancer()//creation de la classe lancer avec 5 des
 		Des d = Des(i + 1);
 		_list_des.push_back(d);
 	}
-	/*Des d1(1);
-	Des d2(2);
-	Des d3(3);
-	Des d4(4);
-	Des d5(5);
-	_list_des.push_back(d1);
-	_list_des.push_back(d2);
-	_list_des.push_back(d3);
-	_list_des.push_back(d4);
-	_list_des.push_back(d5);*/
-
-
 }
 
 void Lancer::jet()
@@ -31,14 +19,6 @@ void Lancer::jet()
 	}
 }
 
-
-
-//void Lancer::affiche()
-//{
-//	for (Des elem : _list_des) {
-//		elem.affiche();
-//	}
-//}
 void Lancer::affiche() {
 	std::cout << " _____  _____  _____  _____  _____ " << std::endl;
 

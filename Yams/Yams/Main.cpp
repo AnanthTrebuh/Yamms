@@ -17,7 +17,19 @@
 #include "Player.h"
 #include "Des.h"
 #include "Lancer.h"
+#include "Game.h"
+
+
 int main() {
+
+	/*Game g = Game();
+	g.affichePlayerGame();
+	g.turnOfGame();*/
+
+
+
+
+
 	std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
 	std::cout << "|  *  |" << std::endl;

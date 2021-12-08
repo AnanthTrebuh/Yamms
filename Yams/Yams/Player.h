@@ -22,5 +22,6 @@ public :
 	void addFigure(Figure& fig);
 	int getScore();
 	std::string getName();
+	void affichePlayer();
 };
 #endif
