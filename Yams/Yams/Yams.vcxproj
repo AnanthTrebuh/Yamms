@@ -143,6 +143,7 @@
     <ClCompile Include="Des.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="GrandeSuite.cpp" />
+    <ClCompile Include="Lancer.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PetiteSuite.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Full.h" />
     <ClInclude Include="GrandeSuite.h" />
+    <ClInclude Include="Lancer.h" />
     <ClInclude Include="PartieSuperieure.h" />
     <ClInclude Include="PetiteSuite.h" />
     <ClInclude Include="Player.h" />

@@ -47,7 +47,15 @@ int Des::getValeur()
 
 void Des::affiche()
 {
-
+	switch (_valeur) {
+	case 1: affiche1(); break;
+	case 2: affiche2(); break;
+	case 3: affiche3(); break;
+	case 4: affiche4(); break;
+	case 5: affiche5(); break;
+	case 6: affiche6(); break;
+	default: break;
+	}
 }
 
 void Des::affiche1()

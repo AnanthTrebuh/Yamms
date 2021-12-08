@@ -14,5 +14,11 @@ public :
 	int getId();
 	int getValeur();
 	void affiche();
+	void affiche1();
+	void affiche2();
+	void affiche3();
+	void affiche4();
+	void affiche5();
+	void affiche6();
 };
 

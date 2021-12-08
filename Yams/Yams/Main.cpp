@@ -16,7 +16,7 @@
 #include "PartieSuperieure.h"
 #include "Player.h"
 #include "Des.h"
-
+#include "Lancer.h"
 int main() {
 	std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
@@ -142,7 +142,17 @@ int main() {
 	{
 		d.jet();
 		std::cout << "nouvelle valeur du de : " << d.getValeur() << "\n";
+		d.affiche();
 	}
+
+	std::cout << "test Classe Lancer ..." << std::endl;
+	Lancer l = Lancer();
+	l.jet();
+	for (Des d : l.getDice()) {
+		std::cout << d.getId() <<  " : " << d.getValeur() << std::endl;
+	}
+	l.affiche();
+
 	
 
 }
