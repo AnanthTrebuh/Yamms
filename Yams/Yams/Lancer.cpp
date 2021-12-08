@@ -72,7 +72,7 @@ void Lancer::affiche() {
 	}
 }
 
-std::vector<Des> Lancer::getDice()
+std::vector<Des>& Lancer::getDice()
 {
 	return _list_des;
 }

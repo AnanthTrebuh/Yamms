@@ -7,17 +7,20 @@ Des::Des()
 {
 	_id = 0;
 	_valeur = 0;
+	_keep = false;
 }
 
 Des::Des(int id):_id(id)
 {
 	_valeur = 0;
+	_keep = false;
 }
 
 Des::Des(const Des& d)
 {
 	_id = d._id;
 	_valeur = d._valeur;
+	_keep = d._keep;
 }
 
 Des& Des::operator=(Des& d)

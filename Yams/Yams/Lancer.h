@@ -8,5 +8,5 @@ public:
 	Lancer();
 	void jet();
 	void affiche();
-	std::vector<Des> getDice();
+	std::vector<Des>& getDice();
 };
