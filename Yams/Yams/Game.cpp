@@ -44,7 +44,9 @@ void Game::turnOfGame()
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // supprimer la ligne erronée dans le buffer
 				}
 				if (num_des != 0) {
-					//_lancer.getDice()[num_des - 1].setKeep(true);
+					num_des--;
+					_lancer.getDice()[num_des].setKeep(true);
+					num_des++;
 				}
 			} while (num_des != 0);
 		}

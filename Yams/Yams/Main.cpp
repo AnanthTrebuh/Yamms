@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <vector>
 
+#include <chrono>
+#include <thread>
 #include "Carre.h"
 #include "Chance.h"
 #include "Full.h"
@@ -147,15 +149,17 @@ int main() {
 	p2.addFigure(c7Bad);
 	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
 	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";
-	*/
-	std::cout << "\n\nTest de la classe Des\n";
+*/	
+	/*std::cout << "\n\nTest de la classe Des\n";
 	Des d = Des(1);
 	for (int i = 0; i < 10; i++)
 	{
 		d.jet();
+		std::this_thread::sleep_for(std::chrono::milliseconds(50));
+
 		std::cout << "nouvelle valeur du de : " << d.getValeur() << "\n";
 		d.affiche();
-	}
+	}*/
 
 	std::cout << "test Classe Lancer ..." << std::endl;
 	Lancer l = Lancer();
@@ -163,5 +167,6 @@ int main() {
 	for (Des d : l.getDice()) {
 		std::cout << d.getId() <<  " : " << d.getValeur() << std::endl;
 	}
+	l.getDice()[1].setKeep(true);
 	l.affiche();
 }

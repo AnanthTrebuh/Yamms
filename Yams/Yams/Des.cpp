@@ -1,5 +1,6 @@
 #include "Des.h"
 #include <stdlib.h> 
+#include <time.h>
 #include <iostream>
 
 Des::Des()
