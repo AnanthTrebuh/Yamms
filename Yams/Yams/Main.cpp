@@ -18,7 +18,7 @@
 #include "Des.h"
 
 int main() {
-	std::cout << "______" << std::endl;
+	std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;

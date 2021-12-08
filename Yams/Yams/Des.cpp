@@ -1,5 +1,6 @@
 #include "Des.h"
 #include <stdlib.h> 
+#include <iostream>
 
 Des::Des()
 {
@@ -47,5 +48,53 @@ int Des::getValeur()
 void Des::affiche()
 {
 
+}
+
+void Des::affiche1()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|     |" << std::endl;
+	std::cout << "|  *  |" << std::endl;
+	std::cout << "|_____|" << std::endl;
+}
+
+void Des::affiche2()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|*    |" << std::endl;
+	std::cout << "|     |" << std::endl;
+	std::cout << "|____*|" << std::endl;
+}
+
+void Des::affiche3()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|*    |" << std::endl;
+	std::cout << "|  *  |" << std::endl;
+	std::cout << "|____*|" << std::endl;
+}
+
+void Des::affiche4()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|*   *|" << std::endl;
+	std::cout << "|     |" << std::endl;
+	std::cout << "|*___*|" << std::endl;
+}
+
+void Des::affiche5()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|*   *|" << std::endl;
+	std::cout << "|  *  |" << std::endl;
+	std::cout << "|*___*|" << std::endl;
+}
+
+void Des::affiche6()
+{
+	std::cout << " _____" << std::endl;
+	std::cout << "|*   *|" << std::endl;
+	std::cout << "|*   *|" << std::endl;
+	std::cout << "|*___*|" << std::endl;
 }
 
