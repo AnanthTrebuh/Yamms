@@ -45,6 +45,16 @@ int Des::getValeur()
 	return _valeur;
 }
 
+bool Des::isKeep()
+{
+	return _keep;
+}
+
+void Des::setKeep(bool keep)
+{
+	_keep = keep;
+}
+
 void Des::affiche()
 {
 	switch (_valeur) {
@@ -62,47 +72,47 @@ void Des::affiche1()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|     |" << std::endl;
-	std::cout << "|  *  |" << std::endl;
+	std::cout << "|  O  |" << std::endl;
 	std::cout << "|_____|" << std::endl;
 }
 
 void Des::affiche2()
 {
 	std::cout << " _____" << std::endl;
-	std::cout << "|*    |" << std::endl;
+	std::cout << "|O    |" << std::endl;
 	std::cout << "|     |" << std::endl;
-	std::cout << "|____*|" << std::endl;
+	std::cout << "|____O|" << std::endl;
 }
 
 void Des::affiche3()
 {
 	std::cout << " _____" << std::endl;
-	std::cout << "|*    |" << std::endl;
-	std::cout << "|  *  |" << std::endl;
-	std::cout << "|____*|" << std::endl;
+	std::cout << "|O    |" << std::endl;
+	std::cout << "|  O  |" << std::endl;
+	std::cout << "|____O|" << std::endl;
 }
 
 void Des::affiche4()
 {
 	std::cout << " _____" << std::endl;
-	std::cout << "|*   *|" << std::endl;
+	std::cout << "|O   O|" << std::endl;
 	std::cout << "|     |" << std::endl;
-	std::cout << "|*___*|" << std::endl;
+	std::cout << "|O___O|" << std::endl;
 }
 
 void Des::affiche5()
 {
 	std::cout << " _____" << std::endl;
-	std::cout << "|*   *|" << std::endl;
-	std::cout << "|  *  |" << std::endl;
-	std::cout << "|*___*|" << std::endl;
+	std::cout << "|O   O|" << std::endl;
+	std::cout << "|  O  |" << std::endl;
+	std::cout << "|O___O|" << std::endl;
 }
 
 void Des::affiche6()
 {
 	std::cout << " _____" << std::endl;
-	std::cout << "|*   *|" << std::endl;
-	std::cout << "|*   *|" << std::endl;
-	std::cout << "|*___*|" << std::endl;
+	std::cout << "|O   O|" << std::endl;
+	std::cout << "|O   O|" << std::endl;
+	std::cout << "|O___O|" << std::endl;
 }
 

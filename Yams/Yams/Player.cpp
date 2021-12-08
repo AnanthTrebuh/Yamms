@@ -65,7 +65,7 @@ Player& Player::operator=(Player& p)
 {
 	Player pl = Player(p);
 	return pl;
-}
+}//peut être a revoir 
 
 Player::~Player()
 {

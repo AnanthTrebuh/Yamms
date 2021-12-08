@@ -23,6 +23,12 @@ int main() {
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;
 
+	std::cout << char(218) << char(205) << char(205) << char(205) << char(196) << char(196) << char(196) << char(196) << char(191) << std::endl;
+	std::cout << char(179) << "0    0 " << char(179) << std::endl;
+	std::cout << char(179) << "   0   " << char(179) << std::endl;
+	std::cout << char(179) << "0    0 " << char(179) << std::endl;
+	std::cout << char(192) << char(196) << char(196) << char(196) <<  char(196) << char(196) << char(196) << char(196) << char(217) << std::endl;
+
 	std::vector<int> resultLancerBon = { 5,5,5,5,5 };
 	const int x = 5;
 	Yahtzee<x> c(resultLancerBon);
@@ -152,7 +158,4 @@ int main() {
 		std::cout << d.getId() <<  " : " << d.getValeur() << std::endl;
 	}
 	l.affiche();
-
-	
-
 }

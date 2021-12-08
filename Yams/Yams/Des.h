@@ -4,6 +4,7 @@ class Des
 private :
 	int _id;
 	int _valeur;
+	bool _keep = false;
 public :
 	Des();
 	Des(int id);
@@ -13,6 +14,8 @@ public :
 	int jet();
 	int getId();
 	int getValeur();
+	bool isKeep();
+	void setKeep(bool keep);
 	void affiche();
 	void affiche1();
 	void affiche2();

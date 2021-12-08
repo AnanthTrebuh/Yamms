@@ -7,7 +7,6 @@ class Lancer {
 public:
 	Lancer();
 	void jet();
-	void jet(std::vector<int> nb_lancer);
 	void affiche();
 	std::vector<Des> getDice();
 };
