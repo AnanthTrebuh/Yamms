@@ -31,6 +31,7 @@ Des::~Des()
 
 int Des::jet()
 {
+	srand(time(NULL));
 	_valeur = (rand() % 6) + 1;
 	return _valeur;
 }

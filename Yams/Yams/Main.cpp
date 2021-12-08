@@ -30,16 +30,10 @@ int main() {
 
 
 
-	std::cout << " _____" << std::endl;
+	/*std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;
-
-	std::cout << char(218) << char(205) << char(205) << char(205) << char(196) << char(196) << char(196) << char(196) << char(191) << std::endl;
-	std::cout << char(179) << "0    0 " << char(179) << std::endl;
-	std::cout << char(179) << "   0   " << char(179) << std::endl;
-	std::cout << char(179) << "0    0 " << char(179) << std::endl;
-	std::cout << char(192) << char(196) << char(196) << char(196) <<  char(196) << char(196) << char(196) << char(196) << char(217) << std::endl;
 
 	std::vector<int> resultLancerBon = { 5,5,5,5,5 };
 	const int x = 5;
@@ -153,7 +147,7 @@ int main() {
 	p2.addFigure(c7Bad);
 	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
 	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";
-
+	*/
 	std::cout << "\n\nTest de la classe Des\n";
 	Des d = Des(1);
 	for (int i = 0; i < 10; i++)

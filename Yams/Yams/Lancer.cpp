@@ -11,7 +11,6 @@ Lancer::Lancer()//creation de la classe lancer avec 5 des
 
 void Lancer::jet()
 {
-
 	for (int i = 0; i < _list_des.size(); i++) {
 		if (!(_list_des[i].isKeep())) {
 			_list_des[i].jet();

@@ -38,13 +38,13 @@ void Game::turnOfGame()
 			std::cout << "Quel Des voulez vous gardez ?(0 pour passez)" << std::endl;
 			int num_des;
 			do {
-				while (!(std::cin >> num_des) || num_des < 0 || num_des > 6) {
+				while (!(std::cin >> num_des) || num_des < 0 || num_des > 5) {
 					std::cerr << "ce des n'existe pas, recommencez :" << std::endl;
 					std::cin.clear(); // effacer les bits d'erreurs 
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // supprimer la ligne erronée dans le buffer
 				}
 				if (num_des != 0) {
-					_lancer.getDice()[num_des - 1].setKeep(true);
+					//_lancer.getDice()[num_des - 1].setKeep(true);
 				}
 			} while (num_des != 0);
 		}
