@@ -9,24 +9,25 @@
 #include <vector>
 #include "Figure.h"
 
-template<int X, int Y>
 class Full : public Figure {
-
+	int _valueX;
+	int _valueY;
 public:
-	Full(std::vector<int> result_lancer);
+	Full(std::vector<int> result_lancer, int valueX, int valueY);
 	int calculScore();
 	bool isFigure();
+	void setValues(int x, int y);
 
 };
 
-template<int X, int Y>
-inline Full<X, Y>::Full(std::vector<int> result_lancer) : Figure(result_lancer, "Full")
+inline Full::Full(std::vector<int> result_lancer, int valueX, int valueY) : Figure(result_lancer, "Full")
 {
+	_valueX = valueX;
+	_valueY = valueY;
 	_score = calculScore();
 }
 
-template<int X, int Y>
-inline int Full<X, Y>::calculScore()
+inline int Full::calculScore()
 {
 	unsigned int res = 0;
 	if (isFigure()){
@@ -35,18 +36,23 @@ inline int Full<X, Y>::calculScore()
 	return res;
 }
 
-template<int X, int Y>
-inline bool Full<X, Y>::isFigure()
+inline bool Full::isFigure()
 {
 	int cptX =0, cptY = 0;
 	for (int elem : _result_lancer) {
-		if (elem == X) {
+		if (elem == _valueX) {
 			cptX++;
 		}
-		if (elem == Y) {
+		if (elem == _valueY) {
 			cptY++;
 		}
 	}
 	return  (cptX == 3 && cptY == 2 || cptX == 2 && cptY == 3);
 	
+}
+
+inline void Full::setValues(int x, int y)
+{
+	_valueX = x;
+	_valueY = y;
 }

@@ -12,13 +12,13 @@ namespace TestsYams
 		
 		TEST_METHOD(TestDesConst)
 		{
-			Des d = Des(1);
+			Dice d = Dice(1);
 			Assert::AreEqual(1, d.getId());
 			Assert::AreEqual(0, d.getValeur());
 		}
 		TEST_METHOD(TestDesJet)
 		{
-			Des d = Des();
+			Dice d = Dice();
 			d.jet();
 			Assert::AreNotEqual(0, d.getValeur());
 		}

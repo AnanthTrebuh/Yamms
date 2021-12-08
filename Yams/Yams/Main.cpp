@@ -17,16 +17,17 @@
 #include "Brelan.h"
 #include "PartieSuperieure.h"
 #include "Player.h"
-#include "Des.h"
+#include "Dice.h"
 #include "Lancer.h"
 #include "Game.h"
 
 
 int main() {
 
-	/*Game g = Game();
+	Game g = Game();
 	g.affichePlayerGame();
-	g.turnOfGame();*/
+	g.turnOfGame();
+	g.turnOfGame();
 
 
 
@@ -39,10 +40,10 @@ int main() {
 
 	std::vector<int> resultLancerBon = { 5,5,5,5,5 };
 	const int x = 5;
-	Yahtzee<x> c(resultLancerBon);
+	Yahtzee c(resultLancerBon, 5);
 	std::cout << "yahtzee lancer Bon : " << c.getScore() << std::endl;
 	std::vector<int> resultLancerBad = { 5,5,5,6,5 };
-	Yahtzee<5> c1(resultLancerBad);
+	Yahtzee c1(resultLancerBad, 5);
 	std::cout << "yahtzee lancer Mauvais : " << c1.getScore() << std::endl;
 
 
@@ -52,24 +53,24 @@ int main() {
 
 
 	std::vector<int> resultLancerBon3 = { 5,5,5,5,4 };
-	Carre<5> c3(resultLancerBon3);
+	Carre c3(resultLancerBon3, 5);
 	std::cout << "Carre lancer Bon : " << c3.getScore() << std::endl;
 	std::vector<int> resultLancerBad3 = { 5,5,5,3,4 };
-	Carre<5> c3Bad(resultLancerBad3);
+	Carre c3Bad(resultLancerBad3, 5);
 	std::cout << "Carre lancer Mauvais : " << c3Bad.getScore() << std::endl;
 
 	std::vector<int> resultLancerBon4 = { 5,5,5,1,1 };
-	Full<5, 1> c4(resultLancerBon4);
+	Full c4(resultLancerBon4, 5, 1);
 	std::cout << "Full lancer Bon : " << c4.getScore() << std::endl;
 	std::vector<int> resultLancerBad4= { 5,5,5,5,5 };
-	Full<5, 4> c4Bad(resultLancerBad4);
+	Full c4Bad(resultLancerBad4, 5,4);
 	std::cout << "Full lancer mauvais: " << c4Bad.getScore() << std::endl;
 
 	std::vector<int> resultLancerBon5 = { 5,5,2,1,5 };
-	Brelan<5> c5(resultLancerBon5);
+	Brelan c5(resultLancerBon5,5);
 	std::cout << "Brelan lancer bon : " << c5.getScore() << std::endl;
 	std::vector<int> resultLancerBad5 = { 5,5,1,2,3 };
-	Brelan<5> c5Bad(resultLancerBad5);
+	Brelan c5Bad(resultLancerBad5, 5);
 	std::cout << "Brelan lancer mauvais : " << c5Bad.getScore() << std::endl;
 	
 	std::vector<int> resultLancerBon6 = { 2,1,3,4,5 };
@@ -148,8 +149,8 @@ int main() {
 	p2.addFigure(c6Bad);
 	p2.addFigure(c7Bad);
 	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
-	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";
-*/	
+	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";*/
+
 	/*std::cout << "\n\nTest de la classe Des\n";
 	Des d = Des(1);
 	for (int i = 0; i < 10; i++)
@@ -161,12 +162,12 @@ int main() {
 		d.affiche();
 	}*/
 
-	std::cout << "test Classe Lancer ..." << std::endl;
+	/*std::cout << "test Classe Lancer ..." << std::endl;
 	Lancer l = Lancer();
 	l.jet();
 	for (Des d : l.getDice()) {
 		std::cout << d.getId() <<  " : " << d.getValeur() << std::endl;
 	}
 	l.getDice()[1].setKeep(true);
-	l.affiche();
+	l.affiche();*/
 }

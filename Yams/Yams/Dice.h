@@ -1,16 +1,16 @@
 #pragma once
-class Des
+class Dice
 {
 private :
 	int _id;
 	int _valeur;
 	bool _keep = false;
 public :
-	Des();
-	Des(int id);
-	Des(const Des& d);
-	Des& operator=(Des& d);
-	~Des();
+	Dice();
+	Dice(int id);
+	Dice(const Dice& d);
+	Dice& operator=(Dice& d);
+	~Dice();
 	int jet();
 	int getId();
 	int getValeur();

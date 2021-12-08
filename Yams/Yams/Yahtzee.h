@@ -7,23 +7,21 @@
 #include <cstdlib>
 #include "SameDice.h"
 
-template <int X>
-class Yahtzee : public SameDice<X, 5> {
+
+class Yahtzee : public SameDice< 5> {
 
 public:
-	Yahtzee(std::vector<int> result_lancer);
+	Yahtzee(std::vector<int> result_lancer, int value);
 	int calculScore();
 
 };
 
-template<int X>
-inline Yahtzee<X>::Yahtzee(std::vector<int> result_lancer) : SameDice < X,5>(result_lancer, "Yahtzee")
+inline Yahtzee::Yahtzee(std::vector<int> result_lancer, int value) : SameDice <5>(result_lancer, "Yahtzee", value)
 {
 	Figure::_score = calculScore();
 }
 
-template<int N>
-inline int Yahtzee<N>::calculScore()
+inline int Yahtzee::calculScore()
 {
 	int res = 0;
 	if (this->isFigure()){

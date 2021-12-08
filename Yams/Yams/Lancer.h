@@ -1,12 +1,12 @@
 #pragma once
-#include "Des.h"
+#include "Dice.h"
 #include <vector>
 
 class Lancer {
-	std::vector<Des> _list_des;
+	std::vector<Dice> _list_des;
 public:
 	Lancer();
 	void jet();
 	void affiche();
-	std::vector<Des>& getDice();
+	std::vector<Dice>& getDice();
 };

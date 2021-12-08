@@ -12,4 +12,8 @@ public :
 	std::vector<Player> getPlayer();
 	void affichePlayerGame();
 	void initDice();
+	std::vector<int> getValueDice();
+	void onePLayerTurn();
+	void chooseFigure(Player p);
+	std::vector<int> makeDiceTab();
 };

@@ -1,66 +1,66 @@
-#include "Des.h"
+#include "Dice.h"
 #include <stdlib.h> 
 #include <time.h>
 #include <iostream>
 
-Des::Des()
+Dice::Dice()
 {
 	_id = 0;
 	_valeur = 0;
 	_keep = false;
 }
 
-Des::Des(int id):_id(id)
+Dice::Dice(int id):_id(id)
 {
 	_valeur = 0;
 	_keep = false;
 }
 
-Des::Des(const Des& d)
+Dice::Dice(const Dice& d)
 {
 	_id = d._id;
 	_valeur = d._valeur;
 	_keep = d._keep;
 }
 
-Des& Des::operator=(Des& d)
+Dice& Dice::operator=(Dice& d)
 {
-	Des newD = Des(d);
+	Dice newD = Dice(d);
 	return newD;
 }
 
-Des::~Des()
+Dice::~Dice()
 {
 }
 
-int Des::jet()
+int Dice::jet()
 {
 	srand(time(NULL));
 	_valeur = (rand() % 6) + 1;
 	return _valeur;
 }
 
-int Des::getId()
+int Dice::getId()
 {
 	return _id;
 }
 
-int Des::getValeur()
+int Dice::getValeur()
 {
 	return _valeur;
 }
 
-bool Des::isKeep()
+bool Dice::isKeep()
 {
 	return _keep;
 }
 
-void Des::setKeep(bool keep)
+void Dice::setKeep(bool keep)
 {
 	_keep = keep;
 }
 
-void Des::affiche()
+void Dice::affiche()
 {
 	switch (_valeur) {
 	case 1: affiche1(); break;
@@ -73,7 +73,7 @@ void Des::affiche()
 	}
 }
 
-void Des::affiche1()
+void Dice::affiche1()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|     |" << std::endl;
@@ -81,7 +81,7 @@ void Des::affiche1()
 	std::cout << "|_____|" << std::endl;
 }
 
-void Des::affiche2()
+void Dice::affiche2()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|O    |" << std::endl;
@@ -89,7 +89,7 @@ void Des::affiche2()
 	std::cout << "|____O|" << std::endl;
 }
 
-void Des::affiche3()
+void Dice::affiche3()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|O    |" << std::endl;
@@ -97,7 +97,7 @@ void Des::affiche3()
 	std::cout << "|____O|" << std::endl;
 }
 
-void Des::affiche4()
+void Dice::affiche4()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|O   O|" << std::endl;
@@ -105,7 +105,7 @@ void Des::affiche4()
 	std::cout << "|O___O|" << std::endl;
 }
 
-void Des::affiche5()
+void Dice::affiche5()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|O   O|" << std::endl;
@@ -113,7 +113,7 @@ void Des::affiche5()
 	std::cout << "|O___O|" << std::endl;
 }
 
-void Des::affiche6()
+void Dice::affiche6()
 {
 	std::cout << " _____" << std::endl;
 	std::cout << "|O   O|" << std::endl;

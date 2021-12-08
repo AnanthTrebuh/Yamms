@@ -33,3 +33,10 @@ std::string Figure::getName()
 {
 	return _name;
 }
+
+void Figure::setDice(std::vector<int> dices)
+{
+	for (int val : dices) {
+		_result_lancer.push_back(val);
+	}
+}

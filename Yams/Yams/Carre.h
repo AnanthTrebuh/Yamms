@@ -8,18 +8,13 @@
 #include "SameDice.h"
 #include <vector>
 
-template<int X>
-class Carre : public SameDice<X,4> {
+class Carre : public SameDice<4> {
 
 public:
-	Carre(std::vector<int> result_lancer);
-	/*int calculScore();
-	bool isFigure();*/
-
+	Carre(std::vector<int> result_lancer, int value);
 };
 
 
-template<int X>
-inline Carre<X>::Carre(std::vector<int> result_lancer) : SameDice<X, 4>(result_lancer, "Carre")
+inline Carre::Carre(std::vector<int> result_lancer, int value) : SameDice<4>(result_lancer, "Carre", value)
 {
 }

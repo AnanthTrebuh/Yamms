@@ -6,13 +6,14 @@
 Lancer::Lancer()//creation de la classe lancer avec 5 des 
 {
 	for (int i = 0; i < 5; i++) {
-		Des d = Des(i + 1);
+		Dice d = Dice(i + 1);
 		_list_des.push_back(d);
 	}
 }
 
 void Lancer::jet()
 {
+	std::cout << "Melange des Des..." << std::endl;
 	for (int i = 0; i < _list_des.size(); i++) {
 		if (!(_list_des[i].isKeep())) {
 			_list_des[i].jet();
@@ -25,7 +26,7 @@ void Lancer::affiche() {
 	std::cout << " _____  _____  _____  _____  _____ " << std::endl;
 
 	for (int i = 0; i < 4; i++) {
-		for (Des elem : _list_des) {
+		for (Dice elem : _list_des) {
 			switch (i) {
 			case 0: switch (elem.getValeur())
 			{
@@ -72,7 +73,7 @@ void Lancer::affiche() {
 	}
 }
 
-std::vector<Des>& Lancer::getDice()
+std::vector<Dice>& Lancer::getDice()
 {
 	return _list_des;
 }

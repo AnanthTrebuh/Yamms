@@ -7,15 +7,13 @@
 #include <cstdlib>
 #include "SameDice.h"
 
-template<int X>
-class Brelan : public SameDice<X, 3> {
+class Brelan : public SameDice<3> {
 
 public:
-	Brelan(std::vector<int> result_lancer);
+	Brelan(std::vector<int> result_lancer, int value);
 };
 
-template<int X>
-inline Brelan<X>::Brelan(std::vector<int> result_lancer) : SameDice<X, 3>(result_lancer, "Brelan")
+inline Brelan::Brelan(std::vector<int> result_lancer, int value) : SameDice<3>(result_lancer, "Brelan", value)
 {
 
 }

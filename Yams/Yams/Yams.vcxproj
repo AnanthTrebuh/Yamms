@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Chance.cpp" />
-    <ClCompile Include="Des.cpp" />
+    <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GrandeSuite.cpp" />
@@ -153,7 +153,7 @@
     <ClInclude Include="Brelan.h" />
     <ClInclude Include="Carre.h" />
     <ClInclude Include="Chance.h" />
-    <ClInclude Include="Des.h" />
+    <ClInclude Include="Dice.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Full.h" />
     <ClInclude Include="Game.h" />

@@ -23,6 +23,7 @@ public:
 	virtual bool isFigure();
 	int getScore();
 	std::string getName();
+	void setDice(std::vector<int> dices);
 
 };
 
