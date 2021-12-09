@@ -35,7 +35,6 @@ Dice::~Dice()
 
 int Dice::jet()
 {
-	srand(time(NULL));
 	_valeur = (rand() % 6) + 1;
 	return _valeur;
 }

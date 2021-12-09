@@ -8,7 +8,7 @@
 #include "SameDice.h"
 
 
-class Yahtzee : public SameDice< 5> {
+class Yahtzee : public SameDice<5> {
 
 public:
 	Yahtzee(std::vector<int> result_lancer, int value);

@@ -23,11 +23,14 @@
 
 
 int main() {
+	srand(time(NULL));
 
 	Game g = Game();
 	g.affichePlayerGame();
 	g.turnOfGame();
 	g.turnOfGame();
+
+	//tableau d'occurence des des pour plus simple de calcul des points
 
 
 
