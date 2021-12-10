@@ -6,15 +6,15 @@ Figure::Figure(std::vector<int> result_lancer, std::string name) : _score(0), _n
 	for (int i = 0; i < 5; i++) {
 		_result_lancer.push_back(result_lancer[i]);
 	}
+	_score = calculScore();
 }
 
 int Figure::calculScore() {
 	int tot = 0;
 	for (int i = 0; i < _result_lancer.size(); i++)
 	{
-		tot += _result_lancer[i];
+		tot += _result_lancer[i] * (i+1);
 	}
-	_score = tot;
 	return tot;
 }
 

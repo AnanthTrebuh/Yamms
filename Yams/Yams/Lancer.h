@@ -9,5 +9,6 @@ public:
 	void jet();
 	void affiche();
 	std::vector<Dice>& getDice();
+	std::vector<int> getTabOccur();
 	void resetDice();
 };

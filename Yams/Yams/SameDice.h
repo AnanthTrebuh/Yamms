@@ -30,8 +30,8 @@ inline int SameDice<X>::calculScore()
 {
 	if (isFigure()) {
 		int res = 0;
-		for (int elem : _result_lancer) {
-			res += elem;
+		for (int i = 0; i < _result_lancer.size(); i++) {
+			res += _result_lancer[i] *(i+1);
 		}
 		return res;
 	}
@@ -43,13 +43,7 @@ inline int SameDice<X>::calculScore()
 template<int X>
 inline bool SameDice<X>::isFigure()
 {
-	int cpt = 0;
-	for (int elem : _result_lancer) {
-		if (elem == _value) {
-			cpt++;
-		}
-	}
-	return(cpt >= X);
+	return(_result_lancer[X-1] == X);
 }
 
 template<int X>

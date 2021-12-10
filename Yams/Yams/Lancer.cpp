@@ -78,8 +78,17 @@ std::vector<Dice>& Lancer::getDice()
 	return _list_des;
 }
 
-void Lancer::resetDice()
+std::vector<int> Lancer::getTabOccur()
 {
+	std::vector<int> tab_occur = {0,0,0,0,0};
+	for (Dice d : _list_des) {
+		int i = d.getValeur() - 1;
+		tab_occur[i]++;
+	}
+	return tab_occur;
+}
+
+void Lancer::resetDice() {
 	for (int i = 0; i < _list_des.size(); i++)
 	{
 		_list_des[i].setKeep(false);

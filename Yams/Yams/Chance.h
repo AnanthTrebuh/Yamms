@@ -12,6 +12,4 @@ class Chance : public Figure{
 
 public:
 	Chance(std::vector<int> result_lancer);
-	int calculScore();
-
 };
