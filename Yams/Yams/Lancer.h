@@ -9,4 +9,5 @@ public:
 	void jet();
 	void affiche();
 	std::vector<Dice>& getDice();
+	void resetDice();
 };

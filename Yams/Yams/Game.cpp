@@ -52,9 +52,7 @@ void Game::affichePlayerGame()
 
 void Game::initDice()
 {
-	for (Dice d : _lancer.getDice()) {
-		d.setKeep(false);
-	}
+	_lancer.resetDice();
 }
 
 std::vector<int> Game::getValueDice()

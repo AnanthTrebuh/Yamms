@@ -77,3 +77,11 @@ std::vector<Dice>& Lancer::getDice()
 {
 	return _list_des;
 }
+
+void Lancer::resetDice()
+{
+	for (int i = 0; i < _list_des.size(); i++)
+	{
+		_list_des[i].setKeep(false);
+	}
+}
