@@ -11,12 +11,12 @@
 
 class Full : public Figure {
 public:
-	Full(std::vector<int> result_lancer);
+	Full();
 	int calculScore();
 	bool isFigure();
 };
 
-inline Full::Full(std::vector<int> result_lancer) : Figure(result_lancer, "Full")
+inline Full::Full() : Figure("Full")
 {
 	_score = calculScore();
 }

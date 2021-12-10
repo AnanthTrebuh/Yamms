@@ -40,68 +40,51 @@ int main() {
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;
 
-	std::vector<int> resultLancerBon = { 0,0,0,0,5 };
 	const int x = 5;
-	Yahtzee c(resultLancerBon);
+	Yahtzee c();
 	std::cout << "yahtzee lancer Bon : " << c.getScore() << std::endl;
-	std::vector<int> resultLancerBad = { 0,0,0,0,4 };
-	Yahtzee c1(resultLancerBad);
+	Yahtzee c1();
 	std::cout << "yahtzee lancer Mauvais : " << c1.getScore() << std::endl;
 
 
-	std::vector<int> resultLancerBon2 = { 0,0,0,0,5 };
-	Chance c2(resultLancerBon2);
+	Chance c2();
 	std::cout << "Chance toujours bon : " << c2.getScore() << std::endl;
 
 
-	std::vector<int> resultLancerBon3 = { 4,0,0,0,0 };
-	Carre c3(resultLancerBon3);
+	Carre c3();
 	std::cout << "Carre lancer Bon : " << c3.getScore() << std::endl;
-	std::vector<int> resultLancerBad3 = { 0,0,0,0,3 };
-	Carre c3Bad(resultLancerBad3);
+	Carre c3Bad();
 	std::cout << "Carre lancer Mauvais : " << c3Bad.getScore() << std::endl;
 
-	std::vector<int> resultLancerBon4 = { 3,2,0,0,0 };
-	Full c4(resultLancerBon4);
+	Full c4();
 	std::cout << "Full lancer Bon : " << c4.getScore() << std::endl;
-	std::vector<int> resultLancerBad4= { 1,2,2,0,0 };
-	Full c4Bad(resultLancerBad4);
+	Full c4Bad();
 	std::cout << "Full lancer mauvais: " << c4Bad.getScore() << std::endl;
 
-	std::vector<int> resultLancerBon5 = { 0,0,3,0,0 };
-	Brelan c5(resultLancerBon5);
+	Brelan c5();
 	std::cout << "Brelan lancer bon : " << c5.getScore() << std::endl;
-	std::vector<int> resultLancerBad5 = { 0,0,1,1,1 };
-	Brelan c5Bad(resultLancerBad5);
+	Brelan c5Bad();
 	std::cout << "Brelan lancer mauvais : " << c5Bad.getScore() << std::endl;
 	
-	std::vector<int> resultLancerBon6 = { 1,1,1,1,1 };
-	GrandeSuite c6(resultLancerBon6);
+	GrandeSuite c6();
 	std::cout << "GrandeSuite lancer Bon : " << c6.getScore() << std::endl;
-	std::vector<int> resultLancerBad6 = { 0,0,0,0,5 };
-	GrandeSuite c6Bad(resultLancerBad6);
+	GrandeSuite c6Bad();
 	std::cout << "GrandeSuite lancer mauvais : " << c6Bad.getScore() << std::endl;
 	
-	std::vector<int> resultLancerBon7 = { 0,1,1,1,1 };
-	PetiteSuite c7(resultLancerBon7);
+	PetiteSuite c7();
 	std::cout << "Petite suite lancer bon : " << c7.getScore() << std::endl;
-	std::vector<int> resultLancerBad7 = { 0,0,0,0,5 };
-	PetiteSuite c7Bad(resultLancerBad7);
+	PetiteSuite c7Bad();
 	std::cout << "petite suite lancer mauvais : " << c7Bad.getScore() << std::endl;
-	std::vector<int> resLancer = { 0,0,0,0,5 };
-	std::sort(resLancer.begin(), resLancer.end());
-	for (int des : resLancer) {
-		std::cout << des << ", ";
-	}
+	
 
-	std::vector<int> resultLancerpartSup1 = { 2,0,0,0,0 };
-	std::vector<int> resultLancerpartSup2 = { 0,3,0,0,2 };
-	std::vector<int> resultLancerpartSup3 = { 0,0,0,0,5 };
-	std::vector<int> resultLancerpartSup4 = { 0,0,0,0,5 };
-	std::vector<int> resultLancerpartSup5 = { 0,0,0,0,5 };
-	std::vector<int> resultLancerpartSup6 = { 0,0,0,0,5 };
-	std::vector<int> resultLancerpartSup7 = { 0,0,0,0,5 };
-	std::vector<int> resultLancerpartSup8 = { 0,0,0,0,5 };
+	std::vector<int> resultLancerpartSup1 = { 2,0,0,0,0,0 };
+	std::vector<int> resultLancerpartSup2 = { 0,3,0,0,2,0 };
+	std::vector<int> resultLancerpartSup3 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup4 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup5 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup6 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup7 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup8 = { 0,0,0,0,5,0 };
 
 	PartieSuperieure<1> ps1(resultLancerpartSup1);
 	PartieSuperieure<2> ps2(resultLancerpartSup2);

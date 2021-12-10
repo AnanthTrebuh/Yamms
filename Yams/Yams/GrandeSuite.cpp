@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <vector>
 
-GrandeSuite::GrandeSuite(std::vector<int> lancer) : Figure(lancer, "GrandeSuite")
+GrandeSuite::GrandeSuite() : Figure("GrandeSuite")
 {
 	_score = calculScore();
 }
@@ -19,7 +19,6 @@ int GrandeSuite::calculScore()
 }
 
 bool GrandeSuite::isFigure() {
-	std::sort(_result_lancer.begin(), _result_lancer.end());
 	bool res = false;
 	for (int elem : _result_lancer) {
 		if (elem == 1) {

@@ -11,13 +11,13 @@
 template<int X>
 class SameDice : public Figure {
 public:
-	SameDice(std::vector<int> result_lancer, std::string name);
+	SameDice(std::string name);
 	int calculScore();
 	bool isFigure();
 };
 
 template<int X>
-inline SameDice<X>::SameDice(std::vector<int> result_lancer, std::string name) : Figure(result_lancer, name)
+inline SameDice<X>::SameDice(std::string name) : Figure(name)
 {
 	_score = calculScore();
 }

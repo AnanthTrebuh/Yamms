@@ -11,12 +11,12 @@
 class Yahtzee : public SameDice<5> {
 
 public:
-	Yahtzee(std::vector<int> result_lancer);
+	Yahtzee();
 	int calculScore();
 
 };
 
-inline Yahtzee::Yahtzee(std::vector<int> result_lancer) : SameDice <5>(result_lancer, "Yahtzee")
+inline Yahtzee::Yahtzee() : SameDice <5>( "Yahtzee")
 {
 	Figure::_score = calculScore();
 }

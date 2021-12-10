@@ -1,12 +1,8 @@
 #include "Figure.h"
 #include <vector>
 
-Figure::Figure(std::vector<int> result_lancer, std::string name) : _score(0), _name(name)
+Figure::Figure( std::string name) : _score(0), _name(name), _result_lancer({0,0,0,0,0,0})
 {
-	for (int i = 0; i < 5; i++) {
-		_result_lancer.push_back(result_lancer[i]);
-	}
-	_score = calculScore();
 }
 
 int Figure::calculScore() {

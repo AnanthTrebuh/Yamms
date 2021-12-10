@@ -64,7 +64,7 @@ int Player::calculScore()
 }
 
 void Player::addFigure(int i, std::vector<int> dices)
-{													
+{
 	_figureToDo[i].setDice(dices);
 	_figures.push_back(_figureToDo[i]);
 	_figureToDo.erase(_figureToDo.begin() + i);
@@ -78,24 +78,25 @@ int Player::getScore()
 
 void Player::addFigureTodo()
 {
-	std::vector<int> dices = { 0,0,0,0,0};
-	PartieSuperieure<1> p1(dices);
-	PartieSuperieure<2> p2(dices);
-	PartieSuperieure<3> p3(dices);
-	PartieSuperieure<4> p4(dices);
-	PartieSuperieure<5> p5(dices);
-	Chance c(dices);
-	Brelan b(dices);
-	Yahtzee y(dices);
-	Carre carre(dices);
-	Full f(dices);
-	PetiteSuite ps(dices);
-	GrandeSuite gs(dices);
+	PartieSuperieure<1> p1;
+	PartieSuperieure<2> p2;
+	PartieSuperieure<3> p3;
+	PartieSuperieure<4> p4;
+	PartieSuperieure<5> p5;
+	PartieSuperieure<6> p6;
+	Chance c;
+	Brelan b;
+	Yahtzee y;
+	Carre carre;
+	Full f;
+	PetiteSuite ps;
+	GrandeSuite gs;
 	_figureToDo.push_back(p1);
 	_figureToDo.push_back(p2);
 	_figureToDo.push_back(p3);
 	_figureToDo.push_back(p4);
 	_figureToDo.push_back(p5);
+	_figureToDo.push_back(p6);
 	_figureToDo.push_back(c);
 	_figureToDo.push_back(b);
 	_figureToDo.push_back(y);
@@ -103,7 +104,6 @@ void Player::addFigureTodo()
 	_figureToDo.push_back(f);
 	_figureToDo.push_back(ps);
 	_figureToDo.push_back(gs);
-
 }
 
 std::vector<Figure> Player::getFigureTodo()

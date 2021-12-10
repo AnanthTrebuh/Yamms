@@ -8,7 +8,7 @@
 class GrandeSuite : public Figure
 {
 public :
-	GrandeSuite(std::vector<int> lancer);
+	GrandeSuite();
 	int calculScore();
 	bool isFigure();
 };

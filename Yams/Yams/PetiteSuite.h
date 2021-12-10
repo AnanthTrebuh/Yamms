@@ -11,7 +11,7 @@
 class PetiteSuite : public Figure
 {
 public:
-	PetiteSuite(std::vector<int> result_lancer);
+	PetiteSuite();
 	int calculScore();
 	bool isFigure();
 };

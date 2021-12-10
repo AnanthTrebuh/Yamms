@@ -1,7 +1,7 @@
 #include "PetiteSuite.h"
 #include <algorithm>
 
-PetiteSuite::PetiteSuite(std::vector<int> result_lancer) : Figure(result_lancer, "PetiteSuite")
+PetiteSuite::PetiteSuite() : Figure( "PetiteSuite")
 {
 	_score = calculScore();
 }
@@ -19,7 +19,6 @@ int PetiteSuite::calculScore()
 bool PetiteSuite::isFigure()
 {
 	int cpt = 0;
-	std::sort(_result_lancer.begin(), _result_lancer.end());
 	for (int dice : _result_lancer) {
 		if (dice > 0) {
 			cpt++;

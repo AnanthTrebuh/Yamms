@@ -9,14 +9,14 @@ template<int N>
 class PartieSuperieure : public Figure
 {
 public:
-	PartieSuperieure(std::vector<int> lancer);
+	PartieSuperieure();
 	int calculScore();
 };
 
 template<int N>
-inline PartieSuperieure<N>::PartieSuperieure(std::vector<int>  lancer): Figure(lancer, ("PartieSuperieur"+ std::to_string(N)))
+inline PartieSuperieure<N>::PartieSuperieure(): Figure(("PartieSuperieur"+ std::to_string(N)))
 {
-	_score = calculScore();
+	_score = 0;
 }
 
 template<int N>
