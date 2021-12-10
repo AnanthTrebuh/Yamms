@@ -11,7 +11,7 @@ int Figure::calculScore() {
 	{
 		tot += _result_lancer[i] * (i+1);
 	}
-
+	_score = tot;
 	return tot;
 }
 

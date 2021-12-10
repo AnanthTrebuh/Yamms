@@ -18,7 +18,6 @@ public:
 
 inline Full::Full() : Figure("Full")
 {
-	_score = calculScore();
 }
 
 inline int Full::calculScore()
@@ -27,6 +26,7 @@ inline int Full::calculScore()
 	if (isFigure()){
 		res = 25; 
 	}
+	_score = res;
 	return res;
 }
 

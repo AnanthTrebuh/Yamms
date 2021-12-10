@@ -25,16 +25,15 @@ inline SameDice<X>::SameDice(std::string name) : Figure(name)
 template<int X>
 inline int SameDice<X>::calculScore()
 {
+	int res = 0;
 	if (isFigure()) {
 		int res = 0;
 		for (int i = 0; i < _result_lancer.size(); i++) {
 			res += _result_lancer[i] *(i+1);
 		}
-		return res;
+		_score = res; 
 	}
-	else {
-		return 0;
-	}
+	return res;
 }
 
 template<int X>

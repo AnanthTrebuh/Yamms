@@ -16,7 +16,6 @@ public:
 template<int N>
 inline PartieSuperieure<N>::PartieSuperieure(): Figure(("PartieSuperieur"+ std::to_string(N)))
 {
-	_score = 0;
 }
 
 template<int N>
@@ -24,5 +23,6 @@ inline int PartieSuperieure<N>::calculScore()
 {
 	int x = _result_lancer[N - 1];
 	int res = x * N;
+	_score = res;
 	return res;
 }
