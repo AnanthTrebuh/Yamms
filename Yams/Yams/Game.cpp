@@ -107,5 +107,5 @@ void Game::chooseFigure(Player p)
 			is_find = true;
 		}
 	}
-	p.addFigure(p.getFigureTodo().at(figure), _lancer.getTabOccur());
+	p.addFigure(figure, _lancer.getTabOccur());
 }

@@ -19,7 +19,7 @@ public :
 	Player& operator=(Player& p);
 	~Player();
 	int calculScore();
-	void addFigure(Figure& fig, std::vector<int> dices);
+	void addFigure(int i, std::vector<int> dices);
 	int getScore();
 	void addFigureTodo();
 	std::vector<Figure> getFigureTodo();

@@ -81,8 +81,14 @@ std::vector<Dice>& Lancer::getDice()
 std::vector<int> Lancer::getTabOccur()
 {
 	std::vector<int> tab_occur = {0,0,0,0,0};
-	for (Dice d : _list_des) {
+	/*for (Dice d : _list_des) {
 		unsigned int i = d.getValeur() - 1;
+		tab_occur[i]++;
+	}*/
+	unsigned int j = 0;
+	for (int i = 0; i < _list_des.size(); i++)
+	{
+		j = _list_des[i].getValeur() - 1;
 		tab_occur[i]++;
 	}
 	return tab_occur;

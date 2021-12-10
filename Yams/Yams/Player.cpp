@@ -63,15 +63,12 @@ int Player::calculScore()
 	return scr;
 }
 
-void Player::addFigure(Figure& fig, std::vector<int> dices)
-{
-	for (int i = 0; i < _figureToDo.size(); i++)
-	{
-		if (fig.getName() == _figureToDo.at(i).getName()) {
-			_figures.push_back(fig);
-			_figureToDo.erase(_figureToDo.begin() + i);
-		}
-	}
+void Player::addFigure(int i, std::vector<int> dices)
+{													
+	std::cout << "entrée dans addFigure" << "\n";
+	_figureToDo[i].setDice(dices);
+	_figures.push_back(_figureToDo[i]);
+	_figureToDo.erase(_figureToDo.begin() + i);
 	calculScore();
 }
 
