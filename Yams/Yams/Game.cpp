@@ -29,13 +29,14 @@ std::vector<Player> Game::initPlayer()
 
 void Game::turnOfGame()
 {	
-	for (Player p : _players) {
+	for (int i = 0; i < _players.size(); i++)
+	{
 		initDice();
-		std::cout << "Tour de : " << p.getName() << std::endl;
+		std::cout << "Tour de : " << _players[i].getName() << std::endl;
 		onePLayerTurn();//un tour de 3 lancer 
 		std::cout << "Vous pouvez faire ces composition :" << std::endl;
-		p.afficheFigureToDo();
-		chooseFigure(p);
+		_players[i].afficheFigureToDo();
+		chooseFigure(_players[i]);
 	}
 }
 
@@ -88,7 +89,7 @@ void Game::onePLayerTurn()
 	}
 }
 
-void Game::chooseFigure(Player p)
+void Game::chooseFigure(Player& p)
 {
 	bool is_find = false;
 	int figure;

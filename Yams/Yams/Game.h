@@ -14,6 +14,6 @@ public :
 	void initDice();
 	std::vector<int> getValueDice();
 	void onePLayerTurn();
-	void chooseFigure(Player p);
+	void chooseFigure(Player& p);
 	std::vector<int> makeDiceTab();
 };

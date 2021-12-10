@@ -65,7 +65,6 @@ int Player::calculScore()
 
 void Player::addFigure(int i, std::vector<int> dices)
 {													
-	std::cout << "entrée dans addFigure" << "\n";
 	_figureToDo[i].setDice(dices);
 	_figures.push_back(_figureToDo[i]);
 	_figureToDo.erase(_figureToDo.begin() + i);
