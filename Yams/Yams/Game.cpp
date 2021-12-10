@@ -106,13 +106,5 @@ void Game::chooseFigure(Player p)
 			is_find = true;
 		}
 	}
-	p.addFigure(p.getFigureTodo().at(figure), makeDiceTab());
-}
-
-std::vector<int> Game::makeDiceTab() {
-	std::vector<int> dices;
-	for (Dice d : _lancer.getDice()) {
-		dices.push_back(d.getValeur());
-	}
-	return dices;
+	p.addFigure(p.getFigureTodo().at(figure), _lancer.getTabOccur());
 }

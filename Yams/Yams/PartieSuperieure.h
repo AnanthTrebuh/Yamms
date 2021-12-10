@@ -22,6 +22,7 @@ inline PartieSuperieure<n>::PartieSuperieure(std::vector<int>  lancer): Figure(l
 template<int N>
 inline int PartieSuperieure<N>::calculScore()
 {
-	int res = _result_lancer[N-1] * N;
+	int x = _result_lancer[N - 1];
+	int res = x * N;
 	return res;
 }

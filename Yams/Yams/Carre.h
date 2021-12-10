@@ -11,10 +11,10 @@
 class Carre : public SameDice<4> {
 
 public:
-	Carre(std::vector<int> result_lancer, int value);
+	Carre(std::vector<int> result_lancer);
 };
 
 
-inline Carre::Carre(std::vector<int> result_lancer, int value) : SameDice<4>(result_lancer, "Carre", value)
+inline Carre::Carre(std::vector<int> result_lancer) : SameDice<4>(result_lancer, "Carre")
 {
 }

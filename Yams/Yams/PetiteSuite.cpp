@@ -18,20 +18,18 @@ int PetiteSuite::calculScore()
 
 bool PetiteSuite::isFigure()
 {
-	int cpt = 1;
-	int elemPrec = _result_lancer[0];
+	int cpt = 0;
 	std::sort(_result_lancer.begin(), _result_lancer.end());
-	for (unsigned int i = 1; i < _result_lancer.size(); i++) {
-		if (_result_lancer[i] == elemPrec + 1) {
+	for (int dice : _result_lancer) {
+		if (dice > 0) {
 			cpt++;
-			elemPrec++;
 		}
-		else if (_result_lancer[i] == elemPrec) {
-		}else {
-			elemPrec = _result_lancer[i];
-			cpt = 1;
+		else {
+			cpt = 0;
 		}
-		if (cpt == 4) break;
+		if (cpt == 4) {
+			return true;
+		}
 	}
-	return (cpt == 4);
+	return false;
 }

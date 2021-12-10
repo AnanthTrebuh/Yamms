@@ -10,10 +10,10 @@
 class Brelan : public SameDice<3> {
 
 public:
-	Brelan(std::vector<int> result_lancer, int value);
+	Brelan(std::vector<int> result_lancer);
 };
 
-inline Brelan::Brelan(std::vector<int> result_lancer, int value) : SameDice<3>(result_lancer, "Brelan", value)
+inline Brelan::Brelan(std::vector<int> result_lancer) : SameDice<3>(result_lancer, "Brelan")
 {
 
 }

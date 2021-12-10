@@ -107,10 +107,10 @@ void Player::addFigureTodo()
 	PartieSuperieure<5> p5(dices);
 	PartieSuperieure<6> p6(dices);
 	Chance c(dices);
-	Brelan b(dices, 0);
-	Yahtzee y(dices, 0);
-	Carre carre(dices, 0);
-	Full f(dices, 0,0);
+	Brelan b(dices);
+	Yahtzee y(dices);
+	Carre carre(dices);
+	Full f(dices);
 	PetiteSuite ps(dices);
 	GrandeSuite gs(dices);
 	_figureToDo.push_back(p1);

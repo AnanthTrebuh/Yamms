@@ -10,18 +10,15 @@
 
 template<int X>
 class SameDice : public Figure {
-	int _value; 
 public:
-	SameDice(std::vector<int> result_lancer, std::string name, int value);
+	SameDice(std::vector<int> result_lancer, std::string name);
 	int calculScore();
 	bool isFigure();
-	void setValue(int value); 
 };
 
 template<int X>
-inline SameDice<X>::SameDice(std::vector<int> result_lancer, std::string name, int value) : Figure(result_lancer, name)
+inline SameDice<X>::SameDice(std::vector<int> result_lancer, std::string name) : Figure(result_lancer, name)
 {
-	_value = value;
 	_score = calculScore();
 }
 
@@ -43,11 +40,11 @@ inline int SameDice<X>::calculScore()
 template<int X>
 inline bool SameDice<X>::isFigure()
 {
-	return(_result_lancer[X-1] == X);
-}
-
-template<int X>
-inline void SameDice<X>::setValue(int value)
-{
-	_value = value;
+	bool res = false; 
+	for (int d : _result_lancer) {
+		if (d == X) {
+			res = true;
+		}
+	}
+	return res;
 }

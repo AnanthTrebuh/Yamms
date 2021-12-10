@@ -10,20 +10,14 @@
 #include "Figure.h"
 
 class Full : public Figure {
-	int _valueX;
-	int _valueY;
 public:
-	Full(std::vector<int> result_lancer, int valueX, int valueY);
+	Full(std::vector<int> result_lancer);
 	int calculScore();
 	bool isFigure();
-	void setValues(int x, int y);
-
 };
 
-inline Full::Full(std::vector<int> result_lancer, int valueX, int valueY) : Figure(result_lancer, "Full")
+inline Full::Full(std::vector<int> result_lancer) : Figure(result_lancer, "Full")
 {
-	_valueX = valueX;
-	_valueY = valueY;
 	_score = calculScore();
 }
 
@@ -38,21 +32,15 @@ inline int Full::calculScore()
 
 inline bool Full::isFigure()
 {
-	int cptX =0, cptY = 0;
+	bool cptX = false , cptY = false;
 	for (int elem : _result_lancer) {
-		if (elem == _valueX) {
-			cptX++;
+		if (elem == 2) {
+			cptX = true;
 		}
-		if (elem == _valueY) {
-			cptY++;
+		if (elem == 3){
+			cptY = true;
 		}
 	}
-	return  (cptX == 3 && cptY == 2 || cptX == 2 && cptY == 3);
+	return  (cptX && cptY);
 	
-}
-
-inline void Full::setValues(int x, int y)
-{
-	_valueX = x;
-	_valueY = y;
 }
