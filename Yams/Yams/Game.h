@@ -15,5 +15,7 @@ public :
 	std::vector<int> getValueDice();
 	void onePLayerTurn();
 	void chooseFigure(Player& p);
-	std::vector<int> makeDiceTab();
+	void calculeScore();
+	void letsPlay();
+	void theWinnerIs();
 };

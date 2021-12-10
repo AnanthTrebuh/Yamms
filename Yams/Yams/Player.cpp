@@ -66,9 +66,9 @@ int Player::calculScore()
 void Player::addFigure(int i, std::vector<int> dices)
 {
 	_figureToDo[i].setDice(dices);
+	//_figureToDo[i].calculScore();
 	_figures.push_back(_figureToDo[i]);
 	_figureToDo.erase(_figureToDo.begin() + i);
-	calculScore();
 }
 
 int Player::getScore()
@@ -118,16 +118,15 @@ std::string Player::getName()
 	return _name;
 }
 
-void Player::afficheFigureToDo()
+void Player::afficheFigureToDo(std::vector<int> dice)
 {
-	int i = 0; 
-	for (Figure fig : _figureToDo) {
-		std::cout << i << " : " << fig.getName() << std::endl;
-		i++;
+	for (int i = 0; i < _figureToDo.size(); i++) {
+		_figureToDo[i].setDice(dice);
+		std::cout << i << " : " << _figureToDo[i].getName() << "  score possible : "<< _figureToDo[i].getScore()<< std::endl;
 	}
 }
 
 void Player::affichePlayer()
 {
-	std::cout << "Joueur no " << _id << " : " << _name << std::endl;
+	std::cout << "Joueur no " << _id << " : " << _name << ", score : "<< _score << std::endl;
 }

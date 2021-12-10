@@ -12,4 +12,5 @@ class Chance : public Figure{
 
 public:
 	Chance();
+	//int calculScore();
 };

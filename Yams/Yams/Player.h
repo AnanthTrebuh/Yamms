@@ -25,7 +25,7 @@ public :
 	std::vector<Figure> getFigureTodo();
 
 	std::string getName();
-	void afficheFigureToDo();
+	void afficheFigureToDo(std::vector<int> dice);
 	void affichePlayer();
 };
 #endif
