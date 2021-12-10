@@ -13,8 +13,8 @@ public:
 	int calculScore();
 };
 
-template<int n>
-inline PartieSuperieure<n>::PartieSuperieure(std::vector<int>  lancer): Figure(lancer, ("PartieSuperieur"+ std::to_string(n)))
+template<int N>
+inline PartieSuperieure<N>::PartieSuperieure(std::vector<int>  lancer): Figure(lancer, ("PartieSuperieur"+ std::to_string(N)))
 {
 	_score = calculScore();
 }

@@ -20,7 +20,7 @@ std::vector<Player> Game::initPlayer()
 		std::string name;
 		std::cout << "Quel est le nom du joueur no " << i + 1 << "?" << std::endl;
 		std::cin >> name;
-		Player p = Player(i + 1, name);
+ 		Player p = Player((i + 1), name);
 		players.push_back(p);
 	}
 
@@ -31,6 +31,7 @@ void Game::turnOfGame()
 {	
 	for (Player p : _players) {
 		initDice();
+		std::cout << "Tour de : " << p.getName() << std::endl;
 		onePLayerTurn();//un tour de 3 lancer 
 		std::cout << "Vous pouvez faire ces composition :" << std::endl;
 		p.afficheFigureToDo();

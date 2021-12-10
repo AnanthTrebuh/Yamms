@@ -25,17 +25,17 @@
 int main() {
 	srand(time(NULL));
 
-	/*Game g = Game();
+	Game g = Game();
 	g.affichePlayerGame();
 	g.turnOfGame();
-	g.turnOfGame();*/
+	g.turnOfGame();
 
 
 
 
 
 
-	std::cout << " _____" << std::endl;
+	/*std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;
@@ -108,7 +108,6 @@ int main() {
 	PartieSuperieure<5> ps3(resultLancerpartSup3);
 	PartieSuperieure<4> ps4(resultLancerpartSup4);
 	PartieSuperieure<3> ps5(resultLancerpartSup5);
-	PartieSuperieure<6> ps6(resultLancerpartSup6);
 	PartieSuperieure<2> ps7(resultLancerpartSup7);
 	PartieSuperieure<1> ps8(resultLancerpartSup8);
 
@@ -118,9 +117,8 @@ int main() {
 	std::cout << "attendu : 0 resultat : " << ps3.getScore() << std::endl;
 	std::cout << "attendu : 0 resultat : " << ps4.getScore() << std::endl;
 	std::cout << "attendu : 3 resultat : " << ps5.getScore() << std::endl;
-	std::cout << "attendu : 30 resultat : " << ps6.getScore() << std::endl;
 	std::cout << "attendu : 2 resultat : " << ps7.getScore() << std::endl;
-	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;
+	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;*/
 
 	/*std::cout << "\n\nTest de la classe player\n";
 	

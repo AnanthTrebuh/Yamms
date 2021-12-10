@@ -15,10 +15,7 @@ Player::Player()
 	_score = 0;
 	_figures = std::vector<Figure>();
 	_figureToDo = std::vector<Figure>();
-	addFigureTodo();
-
-	
-	
+	addFigureTodo();	
 }
 
 Player::Player(int id, std::string name): _id(id), _name(name)
@@ -49,7 +46,7 @@ Player& Player::operator=(Player& p)
 {
 	Player pl = Player(p);
 	return pl;
-}//peut être a revoir 
+}
 
 Player::~Player()
 {
@@ -68,20 +65,6 @@ int Player::calculScore()
 
 void Player::addFigure(Figure& fig, std::vector<int> dices)
 {
-	int valX = 0;
-	int valY = 0;
-	if (fig.getName() == "Full") {
-		//faut caster mais je comprend pas comment faire sinon modifier le truc des calcul sera moins chiant
-	}
-	else if (fig.getName() == "Brelan", fig.getName() == "Carre", fig.getName() == "Yahtzee") {
-		std::cout << "Quels est le des en plusieurs exemplaire dans votre combinaison ? ex : Brelan de 2, 3..." << std::endl;
-		while (!(std::cin >> valX) || valX < 1 || valX >6) {
-			std::cout << "La valeur ne correspond pas, elle doit etre entre 1 et 6, recommencer :";
-			std::cin.clear(); // effacer les bits d'erreurs 
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		}
-	}
-
 	for (int i = 0; i < _figureToDo.size(); i++)
 	{
 		if (fig.getName() == _figureToDo.at(i).getName()) {
@@ -105,7 +88,6 @@ void Player::addFigureTodo()
 	PartieSuperieure<3> p3(dices);
 	PartieSuperieure<4> p4(dices);
 	PartieSuperieure<5> p5(dices);
-	PartieSuperieure<6> p6(dices);
 	Chance c(dices);
 	Brelan b(dices);
 	Yahtzee y(dices);
@@ -118,7 +100,6 @@ void Player::addFigureTodo()
 	_figureToDo.push_back(p3);
 	_figureToDo.push_back(p4);
 	_figureToDo.push_back(p5);
-	_figureToDo.push_back(p6);
 	_figureToDo.push_back(c);
 	_figureToDo.push_back(b);
 	_figureToDo.push_back(y);
