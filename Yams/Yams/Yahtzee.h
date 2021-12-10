@@ -18,7 +18,6 @@ public:
 
 inline Yahtzee::Yahtzee() : SameDice <5>( "Yahtzee")
 {
-	Figure::_score = calculScore();
 }
 
 inline int Yahtzee::calculScore()
@@ -27,5 +26,6 @@ inline int Yahtzee::calculScore()
 	if (this->isFigure()){
 		res = 50;
 	}
+	_score = res;
 	return res;
 }

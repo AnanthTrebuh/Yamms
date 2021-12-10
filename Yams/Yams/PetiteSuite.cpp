@@ -3,7 +3,6 @@
 
 PetiteSuite::PetiteSuite() : Figure( "PetiteSuite")
 {
-	_score = calculScore();
 }
 
 int PetiteSuite::calculScore()
@@ -12,6 +11,7 @@ int PetiteSuite::calculScore()
 	if (isFigure()) {
 		res = 30;
 	}
+	_score = res;
 	return res;
 }
 

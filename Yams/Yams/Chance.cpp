@@ -6,6 +6,5 @@
 
 Chance::Chance(): Figure("Chance")
 {
-	_score = calculScore();
 }
 

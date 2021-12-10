@@ -6,7 +6,6 @@
 
 GrandeSuite::GrandeSuite() : Figure("GrandeSuite")
 {
-	_score = calculScore();
 }
 
 int GrandeSuite::calculScore()
@@ -15,6 +14,7 @@ int GrandeSuite::calculScore()
 	if (isFigure()) {
 		res = 40;
 	}
+	_score = res;
 	return res;
 }
 
