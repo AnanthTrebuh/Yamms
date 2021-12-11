@@ -91,22 +91,22 @@ void Player::addFigureTodo()
 	Full f;
 	PetiteSuite ps;
 	GrandeSuite gs;
-	_figureToDo.push_back(p1);
-	_figureToDo.push_back(p2);
-	_figureToDo.push_back(p3);
-	_figureToDo.push_back(p4);
-	_figureToDo.push_back(p5);
-	_figureToDo.push_back(p6);
-	_figureToDo.push_back(c);
-	_figureToDo.push_back(b);
-	_figureToDo.push_back(y);
-	_figureToDo.push_back(carre);
-	_figureToDo.push_back(f);
-	_figureToDo.push_back(ps);
-	_figureToDo.push_back(gs);
+	_figureToDo.push_back(&p1);
+	_figureToDo.push_back(&p2);
+	_figureToDo.push_back(&p3);
+	_figureToDo.push_back(&p4);
+	_figureToDo.push_back(&p5);
+	_figureToDo.push_back(&p6);
+	_figureToDo.push_back(&c);
+	_figureToDo.push_back(&b);
+	_figureToDo.push_back(&y);
+	_figureToDo.push_back(&carre);
+	_figureToDo.push_back(&f);
+	_figureToDo.push_back(&ps);
+	_figureToDo.push_back(&gs);
 }
 
-std::vector<Figure> Player::getFigureTodo()
+std::vector<Figure*> Player::getFigureTodo()
 {
 	return _figureToDo;
 }

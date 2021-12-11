@@ -10,8 +10,8 @@ private :
 	int _id; 
 	std::string _name;
 	unsigned int _score;
-	std::vector<Figure> _figures;
-	std::vector<Figure> _figureToDo;
+	std::vector<Figure*> _figures;
+	std::vector<Figure*> _figureToDo;
 public :
 	Player();
 	Player(int id, std::string name);
@@ -22,7 +22,7 @@ public :
 	void addFigure(int i, std::vector<int> dices);
 	int getScore();
 	void addFigureTodo();
-	std::vector<Figure> getFigureTodo();
+	std::vector<Figure*> getFigureTodo();
 
 	std::string getName();
 	void afficheFigureToDo(std::vector<int> dice);
