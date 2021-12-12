@@ -54,14 +54,14 @@ int main() {
 	
 
 	std::vector<int> dice = { 4,0,0,0,0,0 };
-	std::vector<int> dice2 = { 4,0,0,0,0,0 };
+	std::vector<int> dice2 = { 3,0,3,0,0,0 };
 
 
 	Carre c3;
 	c3.setDice(dice);
 	std::cout << "Carre lancer Bon : " << c3.getScore() << std::endl;
 	Carre c3Bad;
-	c3Bad.setDice(dice);
+	c3Bad.setDice(dice2);
 	std::cout << "Carre lancer Mauvais : " << c3Bad.getScore() << std::endl;
 	/*
 	Full c4();
@@ -77,7 +77,7 @@ int main() {
 	*/
 
 	GrandeSuite c6;
-	c6.setDice({1,1,1,1,1,1});
+	c6.setDice({1,1,1,1,1,0});
 	std::cout << "GrandeSuite lancer Bon : " << c6.getScore() << std::endl;
 	GrandeSuite c6Bad;
 	c6Bad.setDice({ 1,1,1,0,0,0 });

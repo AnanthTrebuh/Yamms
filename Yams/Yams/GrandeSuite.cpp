@@ -19,14 +19,17 @@ int GrandeSuite::calculScore()
 }
 
 bool GrandeSuite::isFigure() {
-	bool res = false;
-	for (int elem : _result_lancer) {
-		if (elem == 1) {
-			res = true;
+	int cpt = 0;
+	for (int dice : _result_lancer) {
+		if (dice > 0) {
+			cpt++;
 		}
 		else {
-			return false;
+			cpt = 0;
+		}
+		if (cpt == 5) {
+			return true;
 		}
 	}
-	return res;
+	return false;
 }
