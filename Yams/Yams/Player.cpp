@@ -13,16 +13,16 @@ Player::Player()
 	_id = 0;
 	_name = "None";
 	_score = 0;
-	_figures = std::vector<Figure>();
-	_figureToDo = std::vector<Figure>();
+	_figures = std::vector<Figure*>();
+	_figureToDo = std::vector<Figure*>();
 	addFigureTodo();	
 }
 
 Player::Player(int id, std::string name): _id(id), _name(name)
 {
 	_score = 0;
-	_figures = std::vector<Figure>();
-	_figureToDo = std::vector<Figure>();
+	_figures = std::vector<Figure*>();
+	_figureToDo = std::vector<Figure*>();
 	addFigureTodo();
 }
 
@@ -57,7 +57,7 @@ int Player::calculScore()
 	int scr = 0;
 	for (int i = 0; i < _figures.size(); i++)
 	{
-		scr += _figures.at(i).getScore();
+		scr += _figures.at(i)->getScore();
 	}
 	_score = scr;
 	return scr;
@@ -65,7 +65,7 @@ int Player::calculScore()
 
 void Player::addFigure(int i, std::vector<int> dices)
 {
-	_figureToDo[i].setDice(dices);
+	_figureToDo[i]->setDice(dices);
 	//_figureToDo[i].calculScore();
 	_figures.push_back(_figureToDo[i]);
 	_figureToDo.erase(_figureToDo.begin() + i);
@@ -78,32 +78,32 @@ int Player::getScore()
 
 void Player::addFigureTodo()
 {
-	PartieSuperieure<1> p1;
-	PartieSuperieure<2> p2;
-	PartieSuperieure<3> p3;
-	PartieSuperieure<4> p4;
-	PartieSuperieure<5> p5;
-	PartieSuperieure<6> p6;
-	Chance c;
-	Brelan b;
-	Yahtzee y;
-	Carre carre;
-	Full f;
-	PetiteSuite ps;
-	GrandeSuite gs;
-	_figureToDo.push_back(&p1);
-	_figureToDo.push_back(&p2);
-	_figureToDo.push_back(&p3);
-	_figureToDo.push_back(&p4);
-	_figureToDo.push_back(&p5);
-	_figureToDo.push_back(&p6);
-	_figureToDo.push_back(&c);
-	_figureToDo.push_back(&b);
-	_figureToDo.push_back(&y);
-	_figureToDo.push_back(&carre);
-	_figureToDo.push_back(&f);
-	_figureToDo.push_back(&ps);
-	_figureToDo.push_back(&gs);
+	PartieSuperieure<1>* p1 = new PartieSuperieure<1>();
+	PartieSuperieure<2>* p2 = new PartieSuperieure<2>();
+	PartieSuperieure<3>* p3 = new PartieSuperieure<3>();
+	PartieSuperieure<4>* p4 = new PartieSuperieure<4>();
+	PartieSuperieure<5>* p5 = new PartieSuperieure<5>();
+	PartieSuperieure<6>* p6 = new PartieSuperieure<6>();
+	Chance* c = new Chance();
+	Brelan* b = new Brelan();
+	Yahtzee* y = new Yahtzee();
+	Carre* carre = new Carre();
+	Full* f = new Full();
+	PetiteSuite* ps = new PetiteSuite();
+	GrandeSuite* gs = new GrandeSuite();
+	_figureToDo.push_back(p1);
+	_figureToDo.push_back(p2);
+	_figureToDo.push_back(p3);
+	_figureToDo.push_back(p4);
+	_figureToDo.push_back(p5);
+	_figureToDo.push_back(p6);
+	_figureToDo.push_back(c);
+	_figureToDo.push_back(b);
+	_figureToDo.push_back(y);
+	_figureToDo.push_back(carre);
+	_figureToDo.push_back(f);
+	_figureToDo.push_back(ps);
+	_figureToDo.push_back(gs);
 }
 
 std::vector<Figure*> Player::getFigureTodo()
@@ -121,8 +121,14 @@ std::string Player::getName()
 void Player::afficheFigureToDo(std::vector<int> dice)
 {
 	for (int i = 0; i < _figureToDo.size(); i++) {
-		_figureToDo[i].setDice(dice);
-		std::cout << i << " : " << _figureToDo[i].getName() << "  score possible : "<< _figureToDo[i].getScore()<< std::endl;
+		if (_figureToDo.at(i) == nullptr) {
+			std::cout << "figure nulle \n";
+		}
+		else {
+			_figureToDo[i]->setDice(dice);
+			std::cout << i << " : " << _figureToDo[i]->getName() << "  score possible : " << _figureToDo[i]->getScore() << std::endl;
+		}
+		
 	}
 }
 

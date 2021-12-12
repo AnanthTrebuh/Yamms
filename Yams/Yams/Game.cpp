@@ -102,7 +102,7 @@ void Game::chooseFigure(Player& p)
 			std::cin.clear(); // effacer les bits d'erreurs 
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-		std::cout << "Vous avez choisi : " << p.getFigureTodo().at(figure).getName() << std::endl;
+		std::cout << "Vous avez choisi : " << p.getFigureTodo().at(figure)->getName() << std::endl;
 		//std::cout << "Etes vous d'accord avec ce choix ? (o/n)" << std::endl;
 		is_find = true;
 		//char rep;
