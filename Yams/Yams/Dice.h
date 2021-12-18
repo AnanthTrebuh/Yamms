@@ -5,6 +5,10 @@ private :
 	int _id;
 	int _valeur;
 	bool _keep = false;
+	//un des à 3 attribut
+	//un identifiant _id
+	//une valeur _valeur
+	//un bool qui dit si ont garde le des ou non dans le lancer _keep
 public :
 	Dice();
 	Dice(int id);
@@ -16,12 +20,6 @@ public :
 	int getValeur();
 	bool isKeep();
 	void setKeep(bool keep);
-	void affiche();
-	void affiche1();
-	void affiche2();
-	void affiche3();
-	void affiche4();
-	void affiche5();
-	void affiche6();
+
 };
 

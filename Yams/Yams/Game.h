@@ -5,6 +5,8 @@
 class Game {
 	std::vector<Player> _players;
 	Lancer _lancer;
+	//une game à un tableau de joueur _players
+	//et un lancer 
 public :
 	Game();
 	std::vector<Player> initPlayer();

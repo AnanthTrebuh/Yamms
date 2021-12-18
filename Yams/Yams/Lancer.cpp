@@ -11,7 +11,7 @@ Lancer::Lancer()//creation de la classe lancer avec 5 des
 	}
 }
 
-void Lancer::jet()
+void Lancer::jet() //lance tout les des qui ne sont pas bloqué pour avoir un nouveau jeu de des
 {
 	std::cout << "Melange des Des..." << std::endl;
 	for (int i = 0; i < _list_des.size(); i++) {
@@ -22,7 +22,7 @@ void Lancer::jet()
 	}
 }
 
-void Lancer::affiche() {
+void Lancer::affiche() {//fait un magnifique affiche console du lancer de des en ligne en focntion de la valeur de chaque des
 	std::cout << " _____  _____  _____  _____  _____ " << std::endl;
 
 	for (int i = 0; i < 4; i++) {
@@ -73,12 +73,12 @@ void Lancer::affiche() {
 	}
 }
 
-std::vector<Dice>& Lancer::getDice()
+std::vector<Dice>& Lancer::getDice()//renvoie la liste des des
 {
 	return _list_des;
 }
 
-std::vector<int> Lancer::getTabOccur()
+std::vector<int> Lancer::getTabOccur()//crée un tabelau d'occurence par rapport à l'état actuel des des du lancer
 {
 	std::vector<int> tab_occur = {0,0,0,0,0,0};
 	unsigned int j = 0;
@@ -90,7 +90,7 @@ std::vector<int> Lancer::getTabOccur()
 	return tab_occur;
 }
 
-void Lancer::resetDice() {
+void Lancer::resetDice() {//remet tout les des à _keep = false
 	for (int i = 0; i < _list_des.size(); i++)
 	{
 		_list_des[i].setKeep(false);

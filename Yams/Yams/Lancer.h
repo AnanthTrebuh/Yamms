@@ -4,6 +4,7 @@
 
 class Lancer {
 	std::vector<Dice> _list_des;
+	//un lancer ne possède qu'un tabelau de des
 public:
 	Lancer();
 	void jet();

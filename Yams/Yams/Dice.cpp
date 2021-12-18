@@ -3,120 +3,58 @@
 #include <time.h>
 #include <iostream>
 
-Dice::Dice()
+Dice::Dice()//constructeur de des par default
 {
 	_id = 0;
 	_valeur = 0;
 	_keep = false;
 }
 
-Dice::Dice(int id):_id(id)
+Dice::Dice(int id):_id(id)//constructeur avec un id en paramètre
 {
 	_valeur = 0;
 	_keep = false;
 }
 
-Dice::Dice(const Dice& d)
+Dice::Dice(const Dice& d)//constructeur de des par copie
 {
 	_id = d._id;
 	_valeur = d._valeur;
 	_keep = d._keep;
 }
 
-Dice& Dice::operator=(Dice& d)
+Dice& Dice::operator=(Dice& d)//redéfinition de l'opérateur égale
 {
 	Dice newD = Dice(d);
 	return newD;
 }
 
-Dice::~Dice()
+Dice::~Dice()//destrcuteur du des
 {
 }
 
-int Dice::jet()
+int Dice::jet()//un jet de des qui va attribué une valeur aléatoire entre 1 et 6 au des et le mettre dans son attribut _valeur
 {
 	_valeur = (rand() % 6) + 1;
 	return _valeur;
 }
 
-int Dice::getId()
+int Dice::getId()//renvoie l'id du des
 {
 	return _id;
 }
 
-int Dice::getValeur()
+int Dice::getValeur()//renvoie la valeur du des
 {
 	return _valeur;
 }
 
-bool Dice::isKeep()
+bool Dice::isKeep()//renvoie le bool _keep du des
 {
 	return _keep;
 }
 
-void Dice::setKeep(bool keep)
+void Dice::setKeep(bool keep)//applique un bool particulier à un des
 {
 	_keep = keep;
 }
-
-void Dice::affiche()
-{
-	switch (_valeur) {
-	case 1: affiche1(); break;
-	case 2: affiche2(); break;
-	case 3: affiche3(); break;
-	case 4: affiche4(); break;
-	case 5: affiche5(); break;
-	case 6: affiche6(); break;
-	default: break;
-	}
-}
-
-void Dice::affiche1()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|     |" << std::endl;
-	std::cout << "|  O  |" << std::endl;
-	std::cout << "|_____|" << std::endl;
-}
-
-void Dice::affiche2()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|O    |" << std::endl;
-	std::cout << "|     |" << std::endl;
-	std::cout << "|____O|" << std::endl;
-}
-
-void Dice::affiche3()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|O    |" << std::endl;
-	std::cout << "|  O  |" << std::endl;
-	std::cout << "|____O|" << std::endl;
-}
-
-void Dice::affiche4()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|O   O|" << std::endl;
-	std::cout << "|     |" << std::endl;
-	std::cout << "|O___O|" << std::endl;
-}
-
-void Dice::affiche5()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|O   O|" << std::endl;
-	std::cout << "|  O  |" << std::endl;
-	std::cout << "|O___O|" << std::endl;
-}
-
-void Dice::affiche6()
-{
-	std::cout << " _____" << std::endl;
-	std::cout << "|O   O|" << std::endl;
-	std::cout << "|O   O|" << std::endl;
-	std::cout << "|O___O|" << std::endl;
-}
-

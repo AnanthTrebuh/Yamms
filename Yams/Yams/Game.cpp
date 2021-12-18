@@ -1,17 +1,17 @@
 #include "Game.h"
 
-Game::Game()
+Game::Game()//constructeur par default 
 {
 	_players = initPlayer();
 	_lancer = Lancer();
 }
 
-std::vector<Player> Game::initPlayer()
+std::vector<Player> Game::initPlayer()//inityialise les joueur en demandant combien de joueur et en les créant et les ajoutant au tableau de joueurs
 {
 	std::vector<Player> players;
 	int nb_joueur;
 	std::cout << "Veuillez saisir le nombre de joueur : " << std::endl;
-	while (!(std::cin >> nb_joueur) || nb_joueur < 1) {
+	while (!(std::cin >> nb_joueur) || nb_joueur < 2) {
 		std::cerr << "le nombre de joueur ne correspond pas recommencer s'il vous plait :" << std::endl;
 		std::cin.clear(); // effacer les bits d'erreurs 
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // supprimer la ligne erronée dans le buffer
@@ -27,7 +27,7 @@ std::vector<Player> Game::initPlayer()
 	return players;
 }
 
-void Game::turnOfGame()
+void Game::turnOfGame()//un tour de jeu pour chaque joueur avec 3 lancer chacun
 {	
 	for (int i = 0; i < _players.size(); i++)
 	{
@@ -40,19 +40,19 @@ void Game::turnOfGame()
 	}
 }
 
-std::vector<Player> Game::getPlayer()
+std::vector<Player> Game::getPlayer()//renvoie le tabelau de players
 {
 	return _players;
 }
 
-void Game::affichePlayerGame()
+void Game::affichePlayerGame()//affiche les information de chaque joueur qui joue 
 {
 	for (Player p : _players) {
 		p.affichePlayer();
 	}
 }
 
-void Game::initDice()
+void Game::initDice()//initialise les des a _keep = false
 {
 	_lancer.resetDice();
 }
