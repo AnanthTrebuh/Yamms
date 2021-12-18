@@ -7,7 +7,7 @@
 #ifndef PCH_H
 #define PCH_H
 
-#include "../Yams/Des.h"
+#include "../Yams/Dice.h"
 #include "../Yams/Brelan.h"
 #include "../Yams/Carre.h"
 #include "../Yams/Chance.h"

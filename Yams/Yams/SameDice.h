@@ -9,38 +9,26 @@
 #include "Figure.h"
 
 template<int X>
-class SameDice : public Figure {
+class SameDice : public Figure {//Classe SameDice hérite del a classe Figure 
 public:
 	SameDice(std::string name);
-	//int calculScore();
 	bool isFigure();
 };
 
 template<int X>
-inline SameDice<X>::SameDice(std::string name) : Figure(name)
+inline SameDice<X>::SameDice(std::string name) : Figure(name) //construicteur de Samedice appel le constructeur de Figure avec le nom passé en paramètre 
 {
 }
 
-//template<int X>
-//inline int SameDice<X>::calculScore()
-//{
-//	int res = 0;
-//	if (isFigure()) {
-//		int res = 0;
-//		for (int i = 0; i < _result_lancer.size(); i++) {
-//			res += _result_lancer[i] *(i+1);
-//		}
-//		_score = res; 
-//	}
-//	return res;
-//}
+
 
 template<int X>
-inline bool SameDice<X>::isFigure()
+inline bool SameDice<X>::isFigure()//pour vérifié si la figure est valide on regarde dans le tabelau d'occurence si une des occurence est égale à la valeur du template X 
+//3 pour le Brelan, 4 pour le carre et 5 pour le Yahtzee
 {
 	bool res = false; 
-	for (int d : _result_lancer) {
-		if (d == X) {
+	for (int i = 0; i < _result_lancer.size(); i++) {
+		if (_result_lancer[i] >= X) {
 			res = true;
 		}
 	}

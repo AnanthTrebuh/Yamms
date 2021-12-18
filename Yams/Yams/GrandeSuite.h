@@ -5,11 +5,11 @@
 #include "Figure.h"
 
 
-class GrandeSuite : public Figure
+class GrandeSuite : public Figure//classe GrandeSuite hérite de la classe Figure 
 {
 public :
 	GrandeSuite();
-	int calculScore();
+	void calculScore();
 	bool isFigure();
 };
 

@@ -9,26 +9,25 @@
 #include <vector>
 #include "Figure.h"
 
-class Full : public Figure {
+class Full : public Figure {//classe Full hérite de Figure 
 public:
 	Full();
-	int calculScore();
+	void calculScore();
 	bool isFigure();
 };
 
-inline Full::Full() : Figure("Full")
+inline Full::Full() : Figure("Full")//constructeur de Full appel le constructeur de Figure avec le nom "Full"
 {
 }
 
-inline int Full::calculScore()
+inline void Full::calculScore()
 {
 	unsigned int res = 0;
 	if (isFigure()){
 		res = 25; 
 	}
 	_score = res;
-	return res;
-}
+}//vérifie si la figure est valide et met le score de 25 pts
 
 inline bool Full::isFigure()
 {
@@ -41,6 +40,5 @@ inline bool Full::isFigure()
 			cptY = true;
 		}
 	}
-	return  (cptX && cptY);
-	
-}
+	return  (cptX && cptY);	
+}//vérifié si un des élément du tabelau d'occurence est égale à 2 et si un est égale à 3, si c'est le cas alors la figure est valide.

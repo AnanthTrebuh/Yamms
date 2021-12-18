@@ -33,7 +33,7 @@ int main() {
 	g.letsPlay();
 
 
-	
+	/*
 
 	std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
@@ -63,7 +63,7 @@ int main() {
 	Carre c3Bad;
 	c3Bad.setDice(dice2);
 	std::cout << "Carre lancer Mauvais : " << c3Bad.getScore() << std::endl;
-	/*
+	
 	Full c4();
 	std::cout << "Full lancer Bon : " << c4.getScore() << std::endl;
 	Full c4Bad();
@@ -74,7 +74,6 @@ int main() {
 	Brelan c5Bad();
 	std::cout << "Brelan lancer mauvais : " << c5Bad.getScore() << std::endl;
 	
-	*/
 
 	GrandeSuite c6;
 	c6.setDice({1,1,1,1,1,0});

@@ -1,3 +1,4 @@
+//Valentin Lescorbie
 #include "Player.h"
 #include "Carre.h"
 #include "Chance.h"
@@ -9,7 +10,7 @@
 #include "PartieSuperieure.h"
 #include <string>
 
-Player::Player()
+Player::Player()//constructeur par défault
 {
 	_id = 0;
 	_name = "None";
@@ -19,7 +20,7 @@ Player::Player()
 	addFigureTodo();	
 }
 
-Player::Player(int id, std::string name): _id(id), _name(name)
+Player::Player(int id, std::string name): _id(id), _name(name) //constructeur avec les paramètre d'identifiant et le nom du joueur
 {
 	_score = 0;
 	_figures = std::vector<Figure*>();
@@ -27,7 +28,7 @@ Player::Player(int id, std::string name): _id(id), _name(name)
 	addFigureTodo();
 }
 
-Player::Player(const Player& p)
+Player::Player(const Player& p)//constructeur par copie 
 {
 	_id = p._id;
 	_name = p._name;
@@ -43,17 +44,18 @@ Player::Player(const Player& p)
 	_figureToDo = p._figureToDo;
 }
 
-Player& Player::operator=(Player& p)
+Player& Player::operator=(Player& p)//redéfinition de l'opérateur égale
 {
 	Player pl = Player(p);
 	return pl;
 }
 
-Player::~Player()
+Player::~Player()//destructeur du Player
 {
 }
 
-int Player::calculScore()
+void Player::calculScore()//calcule le score du joueur, regarde le score de chaque Figure et l'ajoute au score, 
+//si la figure viens de la partieSupérieur on l'ajoute à une autre variable pour vérifié si le score arrive ou dépasse 63 pour offrir une prime au Score
 {
 	int scr = 0;
 	int psScore = 0;
@@ -68,23 +70,23 @@ int Player::calculScore()
 		}
 	}
 	_score = scr;
-	return scr;
 }
 
-void Player::addFigure(int i, std::vector<int> dices)
+void Player::addFigure(int i, std::vector<int> dices)// ajoute une figure se trouvant dans le tableau des figure a faire vers le tableau des figure faite
+//en lui ajoutant son tabelau d'occurence
+//et en supprimant la figure ç faire du tableau de figure à faire
 {
 	_figureToDo[i]->setDice(dices);
-	//_figureToDo[i].calculScore();
 	_figures.push_back(_figureToDo[i]);
 	_figureToDo.erase(_figureToDo.begin() + i);
 }
 
-int Player::getScore()
+int Player::getScore()//renvoie le score du joueur
 {
 	return _score;
 }
 
-void Player::addFigureTodo()
+void Player::addFigureTodo()// initialise le tableau de figure à faire 
 {
 	PartieSuperieure<1>* p1 = new PartieSuperieure<1>();
 	PartieSuperieure<2>* p2 = new PartieSuperieure<2>();
@@ -114,19 +116,17 @@ void Player::addFigureTodo()
 	_figureToDo.push_back(gs);
 }
 
-std::vector<Figure*> Player::getFigureTodo()
+std::vector<Figure*> Player::getFigureTodo() //renvoie le tableau de figure à faire
 {
 	return _figureToDo;
 }
 
-
-
-std::string Player::getName()
+std::string Player::getName()//renvoie le nom du joueur
 {
 	return _name;
 }
 
-void Player::afficheFigureToDo(std::vector<int> dice)
+void Player::afficheFigureToDo(std::vector<int> dice)//affiche les figure à faire en indiquant aussi le nombre de point qui peuvent être fait avec le lancer actuel
 {
 	for (int i = 0; i < _figureToDo.size(); i++) {
 		if (_figureToDo.at(i) == nullptr) {
@@ -140,7 +140,7 @@ void Player::afficheFigureToDo(std::vector<int> dice)
 	}
 }
 
-void Player::affichePlayer()
+void Player::affichePlayer()//affiche les information sur le joueur
 {
 	std::cout << "Joueur no " << _id << " : " << _name << ", score : "<< _score << std::endl;
 }

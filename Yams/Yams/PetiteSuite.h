@@ -8,10 +8,10 @@
 #include <algorithm>
 #include "Figure.h"
 
-class PetiteSuite : public Figure
+class PetiteSuite : public Figure//classe PetiteSuite qui hérite de la Classe Figure
 {
 public:
 	PetiteSuite();
-	int calculScore();
+	void calculScore();
 	bool isFigure();
 };

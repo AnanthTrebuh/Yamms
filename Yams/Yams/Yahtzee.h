@@ -8,11 +8,11 @@
 #include "SameDice.h"
 
 
-class Yahtzee : public SameDice<5> {
+class Yahtzee : public SameDice<5> {//classe Yahtzee hérite de de la classe SameDice
 
 public:
 	Yahtzee();
-	int calculScore();
+	void calculScore();
 
 };
 
