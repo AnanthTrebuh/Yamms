@@ -7,6 +7,7 @@
 #include "PetiteSuite.h"
 #include "Brelan.h"
 #include "PartieSuperieure.h"
+#include <string>
 
 Player::Player()
 {
@@ -55,9 +56,16 @@ Player::~Player()
 int Player::calculScore()
 {
 	int scr = 0;
+	int psScore = 0;
 	for (int i = 0; i < _figures.size(); i++)
 	{
+		if (_figures.at(i)->getName().find("PartieSuperieur") != std::string::npos) {
+			psScore += _figures.at(i)->getScore();
+		}
 		scr += _figures.at(i)->getScore();
+		if (psScore >= 63) {
+			scr += 35;
+		}
 	}
 	_score = scr;
 	return scr;
