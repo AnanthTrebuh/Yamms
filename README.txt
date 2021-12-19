@@ -92,3 +92,5 @@ Classe
 	Brelan et Carre : herite de SameDice avec une valeur pour le template différente, respectivement 3 et 4.
 
 	Yahtzee : hérite de SameDice avec une valeur de template de 5 et redéfini calculeScore.
+
+Nous n'arrivons pas a faire fonctionner le projet de test nous avons donc fait un fichier cpp avec les test de toute les classes et de leur fonctions.

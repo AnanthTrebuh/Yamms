@@ -14,7 +14,6 @@
 #include "Player.h"
 #include "Dice.h"
 #include "Lancer.h"
-#include "Game.h"
 
 #include "Test.h"
 
@@ -95,30 +94,40 @@ void Test::figureTest()
 	std::cout << "\t|*____|" << std::endl;
 	std::cout << "\nTESTS DE LA PARTIE SUPERIEURE\n\n";
 
-	std::vector<int> resultLancerpartSup1 = { 2,0,0,0,0,0 };
-	std::vector<int> resultLancerpartSup2 = { 0,3,0,0,2,0 };
+	std::vector<int> resultLancerpartSup1 = { 5,0,0,0,0,0 };
+	std::vector<int> resultLancerpartSup2 = { 0,2,0,0,2,0 };
 	std::vector<int> resultLancerpartSup3 = { 0,0,0,0,5,0 };
 	std::vector<int> resultLancerpartSup4 = { 0,0,0,0,5,0 };
-	std::vector<int> resultLancerpartSup5 = { 0,0,0,0,5,0 };
-	std::vector<int> resultLancerpartSup6 = { 0,0,0,0,5,0 };
-	std::vector<int> resultLancerpartSup7 = { 0,0,0,0,5,0 };
-	std::vector<int> resultLancerpartSup8 = { 0,0,0,0,5,0 };
+	std::vector<int> resultLancerpartSup5 = { 0,0,0,0,3,0 };
+	std::vector<int> resultLancerpartSup6 = { 0,0,0,0,0,2 };
+	std::vector<int> resultLancerpartSup7 = { 0,1,0,0,5,0 };
+	std::vector<int> resultLancerpartSup8 = { 1,0,0,0,5,0 };
 
 	PartieSuperieure<1> ps1;
 	PartieSuperieure<2> ps2;
-	PartieSuperieure<5> ps3;
+	PartieSuperieure<3> ps3;
 	PartieSuperieure<4> ps4;
-	PartieSuperieure<3> ps5;
+	PartieSuperieure<5> ps5;
+	PartieSuperieure<6> ps6;
 	PartieSuperieure<2> ps7;
 	PartieSuperieure<1> ps8;
 
-	std::cout << "Partie sup avec plusieur possibilité" << std::endl;
+	std::cout << "Partie sup avec plusieur possibilite" << std::endl;
+	ps1.setDice(resultLancerpartSup1);
 	std::cout << "attendu : 5 resultat : " << ps1.getScore() << std::endl;
+	ps2.setDice(resultLancerpartSup2);
 	std::cout << "attendu : 4 resultat : " << ps2.getScore() << std::endl;
+	ps3.setDice(resultLancerpartSup3);
 	std::cout << "attendu : 0 resultat : " << ps3.getScore() << std::endl;
+	ps4.setDice(resultLancerpartSup4);
 	std::cout << "attendu : 0 resultat : " << ps4.getScore() << std::endl;
-	std::cout << "attendu : 3 resultat : " << ps5.getScore() << std::endl;
+	ps5.setDice(resultLancerpartSup5);
+	std::cout << "attendu : 15 resultat : " << ps5.getScore() << std::endl;
+	ps6.setDice(resultLancerpartSup6);
+	std::cout << "attendu : 12 resultat : " << ps6.getScore() << std::endl;
+	ps7.setDice(resultLancerpartSup7);
 	std::cout << "attendu : 2 resultat : " << ps7.getScore() << std::endl;
+	ps8.setDice(resultLancerpartSup8);
 	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;
 }
 
