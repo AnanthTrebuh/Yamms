@@ -1,3 +1,6 @@
+//Nathan Hubert
+//Valentin Lescorbie
+
 #include <chrono>
 #include <thread>
 #include "Carre.h"
@@ -127,34 +130,30 @@ void Test::playerTest()
 	std::cout << "\t|*____|" << std::endl;
 	std::cout << "\nTESTS DE LA CLASSE PLAYER\n\n";
 
-	/*Player p = Player(1, "Jean");
-	p.addFigure(c);
-	p.addFigure(c2);
-	p.addFigure(c3);
-	p.addFigure(c4);
-	p.addFigure(c5);
-	p.addFigure(c6);
-	p.addFigure(c7);
-	p.addFigure(ps1);
-	p.addFigure(ps2);
-	p.addFigure(ps3);
-	p.addFigure(ps4);
-	p.addFigure(ps5);
-	p.addFigure(ps6);
-	std::cout << "Ajout de toutes les figures valide a un joueur, ";
-	std::cout << p.getName() << " : " << p.getScore() << " attendu 249\n";
 
 
-	Player p2 = Player(2, "Paul");
 
-	p2.addFigure(c1);
-	p2.addFigure(c3Bad);
-	p2.addFigure(c4Bad);
-	p2.addFigure(c5Bad);
-	p2.addFigure(c6Bad);
-	p2.addFigure(c7Bad);
-	std::cout << "Ajout de toutes les figures invalide a un joueur, ";
-	std::cout << p2.getName() << " : " << p2.getScore() << " attendu 0\n";*/
+	Player p = Player(1, "Jean");
+
+//Ajout d'une figure emplacement 0 qui ne vaut aucun points
+	p.afficheFigureToDo({ 0,5,0,0,0,0 });
+	std::cout << " \n Ajout d'une figure partieSuperieur1 qui vaut 0 points" << "\n\n";
+	p.addFigure(0, { 0,5,0,0,0,0 });
+	p.calculScore();
+	std::cout << "Figures a faire : \n";
+	p.afficheFigureToDo({ 0,5,0,0,0,0 });
+	std::cout << "Score :\n";
+	p.affichePlayer();
+
+//Ajout d'une figure empl 0 qui vaut 10 points
+	std::cout << " \n Ajout d'une figure partieSuperieur2 qui vaut 10 points" << "\n\n";
+	p.addFigure(0, { 0,5,0,0,0,0 });
+	p.calculScore();
+	std::cout << "Figures a faire : \n";
+	p.afficheFigureToDo({ 0,5,0,0,0,0 });
+	std::cout << "Score :\n";
+	p.affichePlayer();
+
 }
 
 void Test::diceTest()

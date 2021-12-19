@@ -1,3 +1,6 @@
+//Nathan Hubert
+//Valentin Lescorbie
+
 #pragma once
 class Test
 {

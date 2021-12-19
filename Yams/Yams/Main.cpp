@@ -27,7 +27,7 @@ int main() {
 	
 	srand(time(NULL));
 
-	//Test();
+	Test();
 
 	Game g = Game();
 	/*g.affichePlayerGame();
