@@ -22,24 +22,18 @@
 #include "Game.h"
 
 
-int main() {
-	srand(time(NULL));
-
-	Game g = Game();
-	/*g.affichePlayerGame();
-	g.turnOfGame();
-	g.turnOfGame();*/
-
-	g.letsPlay();
-
-
-	/*
+void Test() {
 
 	std::cout << " _____" << std::endl;
 	std::cout << "|*   *|" << std::endl;
 	std::cout << "|  *  |" << std::endl;
 	std::cout << "|*___*|" << std::endl;
 
+	std::cout << "\t _____" << std::endl;
+	std::cout << "\t|     |" << std::endl;
+	std::cout << "\t|  *  |" << std::endl;
+	std::cout << "\t|_____|" << std::endl;
+	std::cout << "\nTESTS DE LA PARTIE INFERIEURE\n\n";
 	Yahtzee c;
 	c.setDice({ 0,5,0,0,0,0 });
 	std::cout << "yahtzee lancer Bon : " << c.getScore() << std::endl;
@@ -47,11 +41,11 @@ int main() {
 	c1.setDice({ 1,2,3,0,0,0 });
 	std::cout << "yahtzee lancer Mauvais : " << c1.getScore() << std::endl;
 
-	
+
 	Chance c2;
 	c2.setDice({ 5,0,0,0,0,0 });
 	std::cout << "Chance toujours bon : " << c2.getScore() << std::endl;
-	
+
 
 	std::vector<int> dice = { 4,0,0,0,0,0 };
 	std::vector<int> dice2 = { 3,0,3,0,0,0 };
@@ -63,20 +57,24 @@ int main() {
 	Carre c3Bad;
 	c3Bad.setDice(dice2);
 	std::cout << "Carre lancer Mauvais : " << c3Bad.getScore() << std::endl;
-	
-	Full c4();
+
+	Full c4;
+	c4.setDice({3,2,0,0,0,0});
 	std::cout << "Full lancer Bon : " << c4.getScore() << std::endl;
-	Full c4Bad();
+	Full c4Bad;
+	c4Bad.setDice({ 3,1,1,0,0,0 });
 	std::cout << "Full lancer mauvais: " << c4Bad.getScore() << std::endl;
 
-	Brelan c5();
+	Brelan c5;
+	c5.setDice({ 3,0,1,1,0,0 });
 	std::cout << "Brelan lancer bon : " << c5.getScore() << std::endl;
-	Brelan c5Bad();
+	Brelan c5Bad;
+	c5Bad.setDice({ 2,1,1,1,0,0 });
 	std::cout << "Brelan lancer mauvais : " << c5Bad.getScore() << std::endl;
-	
+
 
 	GrandeSuite c6;
-	c6.setDice({1,1,1,1,1,0});
+	c6.setDice({ 1,1,1,1,1,0 });
 	std::cout << "GrandeSuite lancer Bon : " << c6.getScore() << std::endl;
 	GrandeSuite c6Bad;
 	c6Bad.setDice({ 1,1,1,0,0,0 });
@@ -90,9 +88,14 @@ int main() {
 	c7Bad.setDice({ 1,1,1,0,1,1 });
 
 	std::cout << "petite suite lancer mauvais : " << c7Bad.getScore() << std::endl;
-	
 
-	/*
+
+	std::cout << "\n\t _____" << std::endl;
+	std::cout << "\t|    *|" << std::endl;
+	std::cout << "\t|     |" << std::endl;
+	std::cout << "\t|*____|" << std::endl;
+	std::cout << "\nTESTS DE LA PARTIE SUPERIEURE\n\n";
+
 	std::vector<int> resultLancerpartSup1 = { 2,0,0,0,0,0 };
 	std::vector<int> resultLancerpartSup2 = { 0,3,0,0,2,0 };
 	std::vector<int> resultLancerpartSup3 = { 0,0,0,0,5,0 };
@@ -110,17 +113,16 @@ int main() {
 	PartieSuperieure<2> ps7;
 	PartieSuperieure<1> ps8;
 
-	std::cout << "\n\nPartie sup avec plusieur possibilité" << std::endl;
+	std::cout << "Partie sup avec plusieur possibilité" << std::endl;
 	std::cout << "attendu : 5 resultat : " << ps1.getScore() << std::endl;
 	std::cout << "attendu : 4 resultat : " << ps2.getScore() << std::endl;
 	std::cout << "attendu : 0 resultat : " << ps3.getScore() << std::endl;
 	std::cout << "attendu : 0 resultat : " << ps4.getScore() << std::endl;
 	std::cout << "attendu : 3 resultat : " << ps5.getScore() << std::endl;
 	std::cout << "attendu : 2 resultat : " << ps7.getScore() << std::endl;
-	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;*/
-
+	std::cout << "attendu : 1 resultat : " << ps8.getScore() << std::endl;
 	/*std::cout << "\n\nTest de la classe player\n";
-	
+
 	Player p = Player(1, "Jean");
 	p.addFigure(c);
 	p.addFigure(c2);
@@ -140,7 +142,7 @@ int main() {
 
 
 	Player p2 = Player(2, "Paul");
-	
+
 	p2.addFigure(c1);
 	p2.addFigure(c3Bad);
 	p2.addFigure(c4Bad);
@@ -168,5 +170,26 @@ int main() {
 		std::cout << d.getId() <<  " : " << d.getValeur() << std::endl;
 	}
 	l.getDice()[1].setKeep(true);
-	l.affiche();*/
+	l.affiche();
+	*/
+
+}
+
+
+int main() {
+	
+	srand(time(NULL));
+
+	Test();
+
+	Game g = Game();
+	/*g.affichePlayerGame();
+	g.turnOfGame();
+	g.turnOfGame();*/
+
+	g.letsPlay();
+
+	
+
+	
 }

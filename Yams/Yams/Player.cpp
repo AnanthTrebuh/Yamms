@@ -9,6 +9,7 @@
 #include "Brelan.h"
 #include "PartieSuperieure.h"
 #include <string>
+#include <cstdio>
 
 Player::Player()//constructeur par défault
 {
@@ -52,6 +53,7 @@ Player& Player::operator=(Player& p)//redéfinition de l'opérateur égale
 
 Player::~Player()//destructeur du Player
 {
+
 }
 
 void Player::calculScore()//calcule le score du joueur, regarde le score de chaque Figure et l'ajoute au score, 
@@ -94,6 +96,7 @@ void Player::addFigureTodo()// initialise le tableau de figure à faire
 	PartieSuperieure<4>* p4 = new PartieSuperieure<4>();
 	PartieSuperieure<5>* p5 = new PartieSuperieure<5>();
 	PartieSuperieure<6>* p6 = new PartieSuperieure<6>();
+
 	Chance* c = new Chance();
 	Brelan* b = new Brelan();
 	Yahtzee* y = new Yahtzee();
